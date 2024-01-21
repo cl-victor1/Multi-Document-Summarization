@@ -7,9 +7,9 @@
 #pathDoc = "/dropbox/dropbox/23-24/575x/Data/Documents"
 #files  = ["training/2009/UpdateSumm09_test_topics.xml", 
 #          "devtest/GuidedSumm10_test_topics.xml", 
-#          "evaltest/GuidedSumm11_test_topics.xml"];
+#          "evaltest/GuidedSumm11_test_topics.xml"]
 
-import sys;
+import sys
 import xml.etree.ElementTree as ET
 
 def extract_ids(file_path):
@@ -18,14 +18,14 @@ def extract_ids(file_path):
     root = tree.getroot()
 
     # Extract topic IDs and their corresponding document IDs from docsetA
-    topic_docs = [];
+    topic_docs = []
 
     for topic in root.iter('topic'):
       topic_cat = topic.get('category')
 
-      topic_id   = topic.get('id');
-      docsetA    = topic.find('docsetA');
-      docsetA_id = docsetA.get('id');
+      topic_id   = topic.get('id')
+      docsetA    = topic.find('docsetA')
+      docsetA_id = docsetA.get('id')
 
       if docsetA is not None:
           for doc in docsetA.findall('doc'):
@@ -37,32 +37,32 @@ def extract_ids(file_path):
 
 # File path to your XML file
 
-arg1 = sys.argv[1];
+arg1 = sys.argv[1]
 
-training_docset = "";
-devtest_docset  = "";
-evaltest_docset = "";
+training_docset = ""
+devtest_docset  = ""
+evaltest_docset = ""
 
 if "training" in arg1:
-    training_docset = arg1;
+    training_docset = arg1
 elif "devtest" in arg1:
-    devtest_docset = arg1;
+    devtest_docset = arg1
 elif "evaltest" in arg1:
-    evaltest_docset = arg1;
+    evaltest_docset = arg1
 else:
-    print("the path seems to be invalid, please check again.");
-    sys.exit(0);
+    print("the path seems to be invalid, please check again.")
+    sys.exit(0)
 
 docset = {'training': training_docset, 'evaltest': evaltest_docset, 'devtest': devtest_docset}
 
 
 # Extract and sort the document IDs
-training_result_ids = [];
-evaltest_result_ids = [];
-devtest_result_ids  = [];
+training_result_ids = []
+evaltest_result_ids = []
+devtest_result_ids  = []
 
 if training_docset != "":
-    training_result_ids = extract_ids(docset['training']);
+    training_result_ids = extract_ids(docset['training'])
 elif evaltest_docset != "":
     evaltest_result_ids = extract_ids(docset['evaltest'])
 elif devtest_docset != "":
@@ -102,14 +102,17 @@ def transform_doc_id_to_path(doc_id):
       path = f"/corpora/LDC/LDC08T25/data/{dir_name}/{file_name}.xml"
 
     if year in ["1996", "1997", "1998", "1999", "2000"] and dir_name == 'xie':
-      path = path.replace("XIE", "XIN");
+      path = path.replace("XIE", "XIN")
 
     if year in ["1996", "1997", "1998", "1999"] and dir_name == 'nyt':
-      path = path[:-4];
+      path = path[:-4]
 
     if year not in ["1996", "1997", "1998", "1999", "2000", "2004", "2005", "2006"]:
       path = f"/dropbox/23-24/575x/TAC_2010_KBP_Source_Data/data/2009/nw/{dir_name}/{year}{month}{day}/{doc_id}.LDC2009T13.sgm"
 
+    if year == "2006" and month == "10":
+      path = f"/dropbox/23-24/575x/TAC_2010_KBP_Source_Data/data/2009/nw/{dir_name}/{year}{month}{day}/{doc_id}.LDC2007T07.sgm"
+    
     return path
 
 # for item in training_result_ids:
@@ -124,16 +127,16 @@ def transform_doc_id_to_path(doc_id):
 #   path = transform_doc_id_to_path(item[3])
 #   print(f"Doc ID: {item[3]} -> Path: {path}")
 
-training_paths = [];
-devtest_paths  = [];
-evaltest_paths = [];
+training_paths = []
+devtest_paths  = []
+evaltest_paths = []
 
 if training_result_ids != []:
-    training_paths = [transform_doc_id_to_path(item[3]) for item in training_result_ids];
+    training_paths = [transform_doc_id_to_path(item[3]) for item in training_result_ids]
 elif devtest_result_ids != []:
-    devtest_paths  = [transform_doc_id_to_path(item[3]) for item in devtest_result_ids];
+    devtest_paths  = [transform_doc_id_to_path(item[3]) for item in devtest_result_ids]
 elif evaltest_result_ids != []:
-    evaltest_paths = [transform_doc_id_to_path(item[3]) for item in evaltest_result_ids];
+    evaltest_paths = [transform_doc_id_to_path(item[3]) for item in evaltest_result_ids]
 
 # print(training_paths)
 
@@ -154,11 +157,11 @@ elif evaltest_paths != []:
 ## check whether there are bad paths:
 ########################################
 
-# import subprocess;
+# import subprocess
 
 
 
-# args = sys.argv;
+# args = sys.argv
 # if len(args) == 3:
 #     arg2 = sys.argv[-1]
 
@@ -177,45 +180,45 @@ elif evaltest_paths != []:
 #         return False, e.stderr
 
 # # Example usage
-# command = "head -10 {}";
+# command = "head -10 {}"
 
 # def evaluate_paths(a):
 
 #     if int(a) == 0:
-#         iter   = devtest_paths;
-#         source = devtest_result_ids; 
+#         iter   = devtest_paths
+#         source = devtest_result_ids 
 #     elif int(a) == 1:
-#         iter = evaltest_paths;
-#         source = evaltest_result_ids;
+#         iter = evaltest_paths
+#         source = evaltest_result_ids
 #     elif int(a) == 2:
-#         iter = training_paths;
-#         source = training_result_ids;
+#         iter = training_paths
+#         source = training_result_ids
     
-#     success_count = 0;
-#     failure_count = 0;
-#     expected_count = len(source);
-#     broken_paths = [];
+#     success_count = 0
+#     failure_count = 0
+#     expected_count = len(source)
+#     broken_paths = []
 
 #     for i,p in enumerate(iter):
 #         success, output = check_command_output(command.format(p))
 #         if success:
 #             print("Command executed successfully with output:")
 #             #print(output)
-#             success_count += 1;
+#             success_count += 1
 #         else:
 #             print("Command failed or returned no output:")
-#             print(output);
-#             failure_count += 1;
-#             print(source[i]);
-#             broken_paths.append((source[i], p));
-#             # break;
+#             print(output)
+#             failure_count += 1
+#             print(source[i])
+#             broken_paths.append((source[i], p))
+#             # break
 
-#     print(broken_paths);
+#     print(broken_paths)
 #     return (success_count, failure_count, expected_count)
 
 
 # ##### comment out these two lines to disable checking.
 
 # # if len(args) == 3:
-# #     c = evaluate_paths(arg2);
-# #     print(f'final result : {c}');
+# #     c = evaluate_paths(arg2)
+# #     print(f'final result : {c}')
