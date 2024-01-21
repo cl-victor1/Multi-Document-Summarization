@@ -39,13 +39,16 @@ def process(input_directory, output_directory, docID_docsetID_pairs):
                     output.write(f"HEADLINE: {headline}\n")
                     output.write(f"DATELINE: {dateline}\n")
                     # write tokenized sentences in TEXT
-                    output.write("TEXT:\n")
+                    output.write("\n")
         
-                    for sentence in doc.find('TEXT').findall('P'):
-                        sentence = sentence.text.replace('\n', ' ')
-                        # Tokenize the sentence into a list of words
-                        tokenized_words = " ".join(nltk.word_tokenize(sentence))
-                        output.write(tokenized_words + "\n")
+                    for paragraph in doc.find('TEXT').findall('P'):
+                        paragraph = paragraph.text.replace('\n', ' ')
+                        sentences = nltk.sent_tokenize(paragraph)
+                        for sentence in sentences:
+                            # Tokenize the sentence into a list of words
+                            tokenized_words = " ".join(nltk.word_tokenize(sentence))
+                            output.write(tokenized_words + "\n")
+                        output.write("\n")
                     output.write("\n")
                 
 def get_docsetID_docID_match(data, docID_docsetID_pairs):
