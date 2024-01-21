@@ -1,0 +1,54 @@
+TAC 2010 
+Guided Summarization Task - Categories
+
+
+1. Accidents and Natural Disasters:
+
+1.1 WHAT: what happened
+1.2 WHEN: date, time, other temporal placement markers
+1.3 WHERE: physical location
+1.4 WHY: reasons for accident/disaster
+1.5 WHO_AFFECTED: casualties (death, injury), or individuals otherwise negatively affected by the accident/disaster
+1.6 DAMAGES: damages caused by the accident/disaster
+1.7 COUNTERMEASURES: countermeasures, rescue efforts, prevention efforts, other reactions to the accident/disaster
+
+
+2. Attacks (Criminal/Terrorist):
+
+2.1 WHAT: what happened
+2.2 WHEN: date, time, other temporal placement markers
+2.3 WHERE: physical location
+2.4 PERPETRATORS: individuals or groups responsible for the attack
+2.5 WHY: reasons for the attack
+2.6 WHO_AFFECTED: casualties (death, injury), or individuals otherwise negatively affected by the attack
+2.7 DAMAGES: damages caused by the attack
+2.8 COUNTERMEASURES: countermeasures, rescue efforts, prevention efforts, other reactions to the attack (e.g. police investigations)
+
+
+3. Health and Safety:
+
+3.1 WHAT: what is the issue
+3.2 WHO_AFFECTED: who is affected by the health/safety issue
+3.3 HOW: how they are affected
+3.4 WHY: why the health/safety issue occurs
+3.5 COUNTERMEASURES: countermeasures, prevention efforts
+
+
+4. Endangered Resources:
+
+4.1 WHAT: description of resource
+4.2 IMPORTANCE: importance of resource
+4.3 THREATS: threats to the resource
+4.4 COUNTERMEASURES: countermeasures, prevention efforts
+
+
+
+5. Investigations and Trials (Criminal/Legal/Other):
+
+5.1 WHO: who is a defendant or under investigation
+5.2 WHO_INV: who is investigating, prosecuting, or judging
+5.3 WHY: general reasons for the investigation/trial
+5.4 CHARGES: specific charges to the defendant
+5.5 PLEAD: defendant's reaction to charges, including admission of guilt, denial of charges, or explanations
+5.6 SENTENCE: sentence or other consequences to defendant
+

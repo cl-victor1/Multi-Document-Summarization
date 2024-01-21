@@ -1,0 +1,1621 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE TACtaskdata [
+
+<!-- ======================================================================
+      TAC 2009 Update Summarization task data definition
+
+      Written 2009-05-12 by Hoa Dang <hoa.dang@nist.gov>
+     ====================================================================== -->
+
+    <!ELEMENT TACtaskdata  (topic+)           >
+    <!ELEMENT topic       (title, narrative, docsetA, docsetB) >
+    <!ELEMENT title       (#PCDATA)           >
+    <!ELEMENT narrative   (#PCDATA)           >
+    <!ELEMENT docsetA     (doc+)              >
+    <!ELEMENT docsetB     (doc+)              >
+    <!ELEMENT doc          EMPTY              >		       
+
+    <!ATTLIST TACtaskdata
+                      year    CDATA              #REQUIRED
+		      track   (SUMMARIZATION)    #REQUIRED
+                      task    (UPDATE)           #REQUIRED
+		      dataset (SAMPLE|TEST)             #REQUIRED >
+
+    <!ATTLIST topic  id      ID    #REQUIRED >
+
+    <!ATTLIST docsetA  id    ID    #REQUIRED >
+
+    <!ATTLIST docsetB  id    ID    #REQUIRED >
+
+    <!ATTLIST doc      id    CDATA #REQUIRED >   
+
+<!-- ====================================================================== -->
+]>
+
+<TACtaskdata year="2009" track="SUMMARIZATION" task="UPDATE"  dataset="TEST">
+
+<topic id = "D0901A">
+
+	<title> Indian Pakistan conflict </title>
+
+	<narrative>
+		Describe efforts made toward peace in the India-Pakistan conflict over Kashmir.
+	</narrative>
+
+	<docsetA id = "D0901A-A">
+		<doc id = "XIN_ENG_20041113.0001" />
+		<doc id = "APW_ENG_20041118.0081" />
+		<doc id = "LTW_ENG_20041118.0101" />
+		<doc id = "APW_ENG_20041118.0129" />
+		<doc id = "APW_ENG_20041119.0095" />
+		<doc id = "LTW_ENG_20041123.0130" />
+		<doc id = "AFP_ENG_20050119.0019" />
+		<doc id = "AFP_ENG_20050312.0019" />
+		<doc id = "APW_ENG_20050321.0478" />
+		<doc id = "APW_ENG_20050408.0034" />
+	</docsetA>
+
+	<docsetB id = "D0901A-B">
+		<doc id = "AFP_ENG_20050409.0466" />
+		<doc id = "AFP_ENG_20050411.0174" />
+		<doc id = "XIN_ENG_20050418.0033" />
+		<doc id = "AFP_ENG_20050428.0315" />
+		<doc id = "AFP_ENG_20050616.0254" />
+		<doc id = "APW_ENG_20050810.0818" />
+		<doc id = "APW_ENG_20050901.0167" />
+		<doc id = "APW_ENG_20050916.0033" />
+		<doc id = "AFP_ENG_20050928.0242" />
+		<doc id = "AFP_ENG_20051003.0625" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0902A">
+
+	<title> morning-after pill </title>
+
+	<narrative>
+		Describe the debate over use of emergency contraceptives, also called the morning-after pill, and whether or not it should be available without a prescription.
+	</narrative>
+
+	<docsetA id = "D0902A-A">
+		<doc id = "APW_ENG_20041011.0452" />
+		<doc id = "APW_ENG_20041017.0142" />
+		<doc id = "LTW_ENG_20041025.0079" />
+		<doc id = "NYT_ENG_20041130.0307" />
+		<doc id = "LTW_ENG_20050104.0119" />
+		<doc id = "LTW_ENG_20050107.0099" />
+		<doc id = "APW_ENG_20050116.0677" />
+		<doc id = "LTW_ENG_20050128.0086" />
+		<doc id = "NYT_ENG_20050211.0115" />
+		<doc id = "AFP_ENG_20050303.0593" />
+	</docsetA>
+
+	<docsetB id = "D0902A-B">
+		<doc id = "NYT_ENG_20050317.0232" />
+		<doc id = "LTW_ENG_20050327.0023" />
+		<doc id = "NYT_ENG_20050406.0304" />
+		<doc id = "NYT_ENG_20050408.0036" />
+		<doc id = "NYT_ENG_20050411.0180" />
+		<doc id = "NYT_ENG_20050413.0177" />
+		<doc id = "NYT_ENG_20050422.0011" />
+		<doc id = "NYT_ENG_20050426.0073" />
+		<doc id = "AFP_ENG_20050518.0369" />
+		<doc id = "NYT_ENG_20050609.0246" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0903A">
+
+	<title> solar power </title>
+
+	<narrative>
+		Track the growth of solar power worldwide in both plans for facilities and actual production of energy.
+	</narrative>
+
+	<docsetA id = "D0903A-A">
+		<doc id = "APW_ENG_20050902.0312" />
+		<doc id = "NYT_ENG_20050909.0382" />
+		<doc id = "AFP_ENG_20050913.0529" />
+		<doc id = "LTW_ENG_20050916.0063" />
+		<doc id = "CNA_ENG_20050926.0032" />
+		<doc id = "AFP_ENG_20050928.0039" />
+		<doc id = "XIN_ENG_20050928.0217" />
+		<doc id = "NYT_ENG_20051002.0188" />
+		<doc id = "NYT_ENG_20051008.0235" />
+		<doc id = "XIN_ENG_20051020.0280" />
+	</docsetA>
+
+	<docsetB id = "D0903A-B">
+		<doc id = "NYT_ENG_20051026.0060" />
+		<doc id = "APW_ENG_20051026.0632" />
+		<doc id = "XIN_ENG_20051107.0136" />
+		<doc id = "XIN_ENG_20051108.0042" />
+		<doc id = "XIN_ENG_20051120.0213" />
+		<doc id = "CNA_ENG_20051123.0019" />
+		<doc id = "XIN_ENG_20051201.0217" />
+		<doc id = "APW_ENG_20051206.0547" />
+		<doc id = "XIN_ENG_20051217.0019" />
+		<doc id = "LTW_ENG_20051226.0021" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0904A">
+
+	<title> white supremacists </title>
+
+	<narrative>
+		Describe the widespread activities of white supremacists and the efforts of those opposed to them to prevent violence.
+	</narrative>
+
+	<docsetA id = "D0904A-A">
+		<doc id = "NYT_ENG_20050301.0218" />
+		<doc id = "APW_ENG_20050509.0484" />
+		<doc id = "NYT_ENG_20050801.0089" />
+		<doc id = "APW_ENG_20050805.1073" />
+		<doc id = "NYT_ENG_20050827.0131" />
+		<doc id = "APW_ENG_20050927.1277" />
+		<doc id = "LTW_ENG_20051005.0006" />
+		<doc id = "AFP_ENG_20051015.0380" />
+		<doc id = "APW_ENG_20051016.0057" />
+		<doc id = "APW_ENG_20051017.0005" />
+	</docsetA>
+
+	<docsetB id = "D0904A-B">
+		<doc id = "APW_ENG_20051102.0077" />
+		<doc id = "APW_ENG_20051107.0128" />
+		<doc id = "NYT_ENG_20051209.0039" />
+		<doc id = "APW_ENG_20051211.0035" />
+		<doc id = "AFP_ENG_20051212.0218" />
+		<doc id = "NYT_ENG_20051215.0237" />
+		<doc id = "NYT_ENG_20051218.0100" />
+		<doc id = "APW_ENG_20051218.0785" />
+		<doc id = "APW_ENG_20051219.0641" />
+		<doc id = "APW_ENG_20051220.0216" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0905A">
+
+	<title> wind turbines </title>
+
+	<narrative>
+		Describe arguments for and against wind turbines, noting any growth of opposition to wind farms.
+	</narrative>
+
+	<docsetA id = "D0905A-A">
+		<doc id = "LTW_ENG_20041007.0138" />
+		<doc id = "NYT_ENG_20041101.0156" />
+		<doc id = "CNA_ENG_20041107.0017" />
+		<doc id = "NYT_ENG_20041108.0158" />
+		<doc id = "NYT_ENG_20041108.0249" />
+		<doc id = "NYT_ENG_20041113.0076" />
+		<doc id = "NYT_ENG_20041123.0274" />
+		<doc id = "NYT_ENG_20041209.0004" />
+		<doc id = "NYT_ENG_20041214.0085" />
+		<doc id = "NYT_ENG_20050109.0086" />
+	</docsetA>
+
+	<docsetB id = "D0905A-B">
+		<doc id = "NYT_ENG_20050111.0231" />
+		<doc id = "AFP_ENG_20050114.0288" />
+		<doc id = "NYT_ENG_20050116.0063" />
+		<doc id = "LTW_ENG_20050119.0056" />
+		<doc id = "CNA_ENG_20050201.0039" />
+		<doc id = "NYT_ENG_20050216.0064" />
+		<doc id = "AFP_ENG_20050216.0329" />
+		<doc id = "APW_ENG_20050223.0859" />
+		<doc id = "NYT_ENG_20050224.0147" />
+		<doc id = "NYT_ENG_20050321.0284" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0906B">
+
+	<title> rains and mudslides in Southern California </title>
+
+	<narrative>
+		Describe the effects and responses to the heavy rainfall and mudslides in Southern California.
+	</narrative>
+
+	<docsetA id = "D0906B-A">
+		<doc id = "LTW_ENG_20050109.0001" />
+		<doc id = "LTW_ENG_20050110.0006" />
+		<doc id = "NYT_ENG_20050110.0009" />
+		<doc id = "AFP_ENG_20050110.0079" />
+		<doc id = "LTW_ENG_20050110.0118" />
+		<doc id = "NYT_ENG_20050110.0340" />
+		<doc id = "NYT_ENG_20050111.0015" />
+		<doc id = "NYT_ENG_20050111.0349" />
+		<doc id = "NYT_ENG_20050112.0012" />
+		<doc id = "LTW_ENG_20050112.0156" />
+	</docsetA>
+
+	<docsetB id = "D0906B-B">
+		<doc id = "NYT_ENG_20050113.0017" />
+		<doc id = "APW_ENG_20050115.0118" />
+		<doc id = "LTW_ENG_20050126.0017" />
+		<doc id = "NYT_ENG_20050221.0264" />
+		<doc id = "AFP_ENG_20050221.0700" />
+		<doc id = "NYT_ENG_20050222.0007" />
+		<doc id = "NYT_ENG_20050223.0002" />
+		<doc id = "LTW_ENG_20050223.0062" />
+		<doc id = "APW_ENG_20050223.0114" />
+		<doc id = "APW_ENG_20050224.0120" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0907B">
+
+	<title> John Yoo </title>
+
+	<narrative>
+		Describe the views and activities of John C. Yoo.
+	</narrative>
+
+	<docsetA id = "D0907B-A">
+		<doc id = "AFP_ENG_20041218.0339" />
+		<doc id = "NYT_ENG_20050104.0212" />
+		<doc id = "LTW_ENG_20050106.0044" />
+		<doc id = "APW_ENG_20050106.0105" />
+		<doc id = "LTW_ENG_20050110.0094" />
+		<doc id = "LTW_ENG_20050122.0044" />
+		<doc id = "LTW_ENG_20050202.0069" />
+		<doc id = "NYT_ENG_20050219.0010" />
+		<doc id = "LTW_ENG_20050420.0047" />
+		<doc id = "LTW_ENG_20050525.0042" />
+	</docsetA>
+
+	<docsetB id = "D0907B-B">
+		<doc id = "LTW_ENG_20050714.0026" />
+		<doc id = "LTW_ENG_20050720.0007" />
+		<doc id = "LTW_ENG_20050721.0029" />
+		<doc id = "NYT_ENG_20050729.0349" />
+		<doc id = "NYT_ENG_20050813.0043" />
+		<doc id = "NYT_ENG_20050915.0052" />
+		<doc id = "LTW_ENG_20051004.0032" />
+		<doc id = "NYT_ENG_20051004.0222" />
+		<doc id = "APW_ENG_20051102.1021" />
+		<doc id = "LTW_ENG_20051213.0076" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0908B">
+
+	<title> Nepali King Gyanendra seizes power </title>
+
+	<narrative>
+		Describe foreign reactions to Nepali King Gyanendra's seizure of power on February 1, 2005.
+	</narrative>
+
+	<docsetA id = "D0908B-A">
+		<doc id = "LTW_ENG_20050201.0081" />
+		<doc id = "XIN_ENG_20050201.0305" />
+		<doc id = "AFP_ENG_20050201.0617" />
+		<doc id = "APW_ENG_20050201.0632" />
+		<doc id = "AFP_ENG_20050201.0644" />
+		<doc id = "LTW_ENG_20050202.0105" />
+		<doc id = "AFP_ENG_20050202.0608" />
+		<doc id = "XIN_ENG_20050203.0210" />
+		<doc id = "AFP_ENG_20050203.0293" />
+		<doc id = "APW_ENG_20050205.0034" />
+	</docsetA>
+
+	<docsetB id = "D0908B-B">
+		<doc id = "AFP_ENG_20050207.0551" />
+		<doc id = "AFP_ENG_20050208.0558" />
+		<doc id = "AFP_ENG_20050214.0455" />
+		<doc id = "AFP_ENG_20050215.0475" />
+		<doc id = "AFP_ENG_20050217.0237" />
+		<doc id = "AFP_ENG_20050227.0241" />
+		<doc id = "XIN_ENG_20050307.0058" />
+		<doc id = "AFP_ENG_20050307.0097" />
+		<doc id = "AFP_ENG_20050307.0200" />
+		<doc id = "AFP_ENG_20050310.0022" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0909B">
+
+	<title> Northern Ireland Peace Process </title>
+
+	<narrative>
+		Outline developments in the Northern Ireland Peace Process.
+	</narrative>
+
+	<docsetA id = "D0909B-A">
+		<doc id = "APW_ENG_20050527.0397" />
+		<doc id = "AFP_ENG_20050613.0282" />
+		<doc id = "AFP_ENG_20050614.0518" />
+		<doc id = "APW_ENG_20050615.0538" />
+		<doc id = "APW_ENG_20050618.0396" />
+		<doc id = "APW_ENG_20050621.0309" />
+		<doc id = "AFP_ENG_20050627.0365" />
+		<doc id = "AFP_ENG_20050629.0709" />
+		<doc id = "AFP_ENG_20050722.0652" />
+		<doc id = "AFP_ENG_20050723.0072" />
+	</docsetA>
+
+	<docsetB id = "D0909B-B">
+		<doc id = "AFP_ENG_20050726.0252" />
+		<doc id = "NYT_ENG_20050727.0056" />
+		<doc id = "APW_ENG_20050727.0262" />
+		<doc id = "NYT_ENG_20050728.0046" />
+		<doc id = "XIN_ENG_20050728.0277" />
+		<doc id = "AFP_ENG_20050728.0294" />
+		<doc id = "AFP_ENG_20050728.0329" />
+		<doc id = "AFP_ENG_20050728.0376" />
+		<doc id = "AFP_ENG_20050728.0487" />
+		<doc id = "AFP_ENG_20050728.0592" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0910B">
+
+	<title> Tamil Tigers in Sri Lanka </title>
+
+	<narrative>
+		Describe developments in the struggle between Tamil rebels and the government of Sri Lanka.
+	</narrative>
+
+	<docsetA id = "D0910B-A">
+		<doc id = "AFP_ENG_20041001.0527" />
+		<doc id = "XIN_ENG_20041007.0098" />
+		<doc id = "AFP_ENG_20041009.0116" />
+		<doc id = "XIN_ENG_20041014.0067" />
+		<doc id = "XIN_ENG_20041014.0258" />
+		<doc id = "XIN_ENG_20041015.0050" />
+		<doc id = "XIN_ENG_20041016.0008" />
+		<doc id = "XIN_ENG_20041017.0003" />
+		<doc id = "XIN_ENG_20041026.0153" />
+		<doc id = "XIN_ENG_20041027.0234" />
+	</docsetA>
+
+	<docsetB id = "D0910B-B">
+		<doc id = "AFP_ENG_20041031.0144" />
+		<doc id = "XIN_ENG_20041101.0074" />
+		<doc id = "XIN_ENG_20041104.0210" />
+		<doc id = "XIN_ENG_20041105.0153" />
+		<doc id = "XIN_ENG_20041107.0013" />
+		<doc id = "XIN_ENG_20041109.0252" />
+		<doc id = "XIN_ENG_20041116.0161" />
+		<doc id = "XIN_ENG_20041118.0126" />
+		<doc id = "AFP_ENG_20041119.0101" />
+		<doc id = "XIN_ENG_20041122.0189" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0911C">
+
+	<title> Bobby Fischer </title>
+
+	<narrative>
+		Describe efforts to secure asylum in Iceland for chess legend Bobby Fischer.
+	</narrative>
+
+	<docsetA id = "D0911C-A">
+		<doc id = "AFP_ENG_20050316.0102" />
+		<doc id = "APW_ENG_20050316.0582" />
+		<doc id = "APW_ENG_20050316.1103" />
+		<doc id = "APW_ENG_20050317.0768" />
+		<doc id = "APW_ENG_20050318.0720" />
+		<doc id = "APW_ENG_20050319.0012" />
+		<doc id = "NYT_ENG_20050321.0074" />
+		<doc id = "NYT_ENG_20050321.0136" />
+		<doc id = "AFP_ENG_20050321.0502" />
+		<doc id = "APW_ENG_20050321.0844" />
+	</docsetA>
+
+	<docsetB id = "D0911C-B">
+		<doc id = "AFP_ENG_20050322.0004" />
+		<doc id = "NYT_ENG_20050322.0023" />
+		<doc id = "AFP_ENG_20050322.0060" />
+		<doc id = "APW_ENG_20050322.0174" />
+		<doc id = "AFP_ENG_20050322.0675" />
+		<doc id = "APW_ENG_20050322.0678" />
+		<doc id = "APW_ENG_20050322.0960" />
+		<doc id = "AFP_ENG_20050323.0074" />
+		<doc id = "LTW_ENG_20050323.0083" />
+		<doc id = "LTW_ENG_20050323.0092" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0912C">
+
+	<title> Cindy Sheehan </title>
+
+	<narrative>
+		Describe the anti-war protest efforts of Cindy Sheehan.
+	</narrative>
+
+	<docsetA id = "D0912C-A">
+		<doc id = "LTW_ENG_20050806.0052" />
+		<doc id = "NYT_ENG_20050806.0235" />
+		<doc id = "APW_ENG_20050807.0002" />
+		<doc id = "APW_ENG_20050807.0569" />
+		<doc id = "LTW_ENG_20050810.0126" />
+		<doc id = "LTW_ENG_20050811.0096" />
+		<doc id = "APW_ENG_20050811.0108" />
+		<doc id = "LTW_ENG_20050811.0138" />
+		<doc id = "APW_ENG_20050811.0241" />
+		<doc id = "APW_ENG_20050811.0720" />
+	</docsetA>
+
+	<docsetB id = "D0912C-B">
+		<doc id = "XIN_ENG_20050813.0119" />
+		<doc id = "NYT_ENG_20050813.0140" />
+		<doc id = "LTW_ENG_20050814.0007" />
+		<doc id = "APW_ENG_20050815.0129" />
+		<doc id = "APW_ENG_20050816.0046" />
+		<doc id = "NYT_ENG_20050816.0052" />
+		<doc id = "LTW_ENG_20050816.0080" />
+		<doc id = "LTW_ENG_20050816.0125" />
+		<doc id = "NYT_ENG_20050816.0206" />
+		<doc id = "APW_ENG_20050817.0136" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0913C">
+
+	<title> Ten Commandments </title>
+
+	<narrative>
+		Describe developments in the two cases before the U.S. Supreme Court regarding the public display of the Ten Commandments.  
+	</narrative>
+
+	<docsetA id = "D0913C-A">
+		<doc id = "NYT_ENG_20050302.0107" />
+		<doc id = "LTW_ENG_20050302.0134" />
+		<doc id = "LTW_ENG_20050302.0144" />
+		<doc id = "NYT_ENG_20050302.0156" />
+		<doc id = "NYT_ENG_20050302.0164" />
+		<doc id = "NYT_ENG_20050302.0169" />
+		<doc id = "NYT_ENG_20050302.0225" />
+		<doc id = "NYT_ENG_20050302.0256" />
+		<doc id = "AFP_ENG_20050302.0458" />
+		<doc id = "AFP_ENG_20050302.0577" />
+	</docsetA>
+
+	<docsetB id = "D0913C-B">
+		<doc id = "NYT_ENG_20050303.0005" />
+		<doc id = "APW_ENG_20050303.0096" />
+		<doc id = "CNA_ENG_20050304.0004" />
+		<doc id = "NYT_ENG_20050307.0068" />
+		<doc id = "LTW_ENG_20050529.0012" />
+		<doc id = "NYT_ENG_20050620.0104" />
+		<doc id = "NYT_ENG_20050620.0156" />
+		<doc id = "AFP_ENG_20050622.0326" />
+		<doc id = "NYT_ENG_20050627.0049" />
+		<doc id = "NYT_ENG_20050627.0147" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0914C">
+
+	<title> Egypt's Sinai resorts attacked </title>
+
+	<narrative>
+		Provide details of the attacks on Egypt's Sinai Penninsula resorts targetting Israeli tourists.  
+	</narrative>
+
+	<docsetA id = "D0914C-A">
+		<doc id = "NYT_ENG_20041007.0255" />
+		<doc id = "XIN_ENG_20041007.0328" />
+		<doc id = "APW_ENG_20041007.0481" />
+		<doc id = "AFP_ENG_20041007.0744" />
+		<doc id = "AFP_ENG_20041007.0769" />
+		<doc id = "AFP_ENG_20041007.0771" />
+		<doc id = "AFP_ENG_20041007.0786" />
+		<doc id = "AFP_ENG_20041007.0803" />
+		<doc id = "AFP_ENG_20041007.0837" />
+		<doc id = "AFP_ENG_20041007.0861" />
+	</docsetA>
+
+	<docsetB id = "D0914C-B">
+		<doc id = "LTW_ENG_20041008.0009" />
+		<doc id = "CNA_ENG_20041008.0026" />
+		<doc id = "XIN_ENG_20041008.0034" />
+		<doc id = "AFP_ENG_20041008.0037" />
+		<doc id = "AFP_ENG_20041008.0053" />
+		<doc id = "AFP_ENG_20041008.0068" />
+		<doc id = "NYT_ENG_20041008.0069" />
+		<doc id = "AFP_ENG_20041008.0081" />
+		<doc id = "AFP_ENG_20041008.0083" />
+		<doc id = "APW_ENG_20041008.0088" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0915C">
+
+	<title> Iraqi Elections </title>
+
+	<narrative>
+		Describe attacks on Iraqi voting stations intended to disrupt the January 30, 2005 elections.
+	</narrative>
+
+	<docsetA id = "D0915C-A">
+		<doc id = "AFP_ENG_20050127.0850" />
+		<doc id = "XIN_ENG_20050128.0029" />
+		<doc id = "AFP_ENG_20050128.0114" />
+		<doc id = "AFP_ENG_20050128.0214" />
+		<doc id = "AFP_ENG_20050128.0553" />
+		<doc id = "LTW_ENG_20050129.0047" />
+		<doc id = "AFP_ENG_20050129.0077" />
+		<doc id = "AFP_ENG_20050129.0195" />
+		<doc id = "AFP_ENG_20050129.0234" />
+		<doc id = "AFP_ENG_20050129.0292" />
+	</docsetA>
+
+	<docsetB id = "D0915C-B">
+		<doc id = "XIN_ENG_20050130.0006" />
+		<doc id = "XIN_ENG_20050130.0011" />
+		<doc id = "AFP_ENG_20050130.0022" />
+		<doc id = "XIN_ENG_20050130.0023" />
+		<doc id = "AFP_ENG_20050130.0029" />
+		<doc id = "XIN_ENG_20050130.0035" />
+		<doc id = "AFP_ENG_20050130.0039" />
+		<doc id = "AFP_ENG_20050130.0049" />
+		<doc id = "AFP_ENG_20050130.0054" />
+		<doc id = "AFP_ENG_20050130.0056" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0916C">
+
+	<title> kidnapping of Jill Carroll </title>
+
+	<narrative>
+		Provide details of the kidnapping of journalist Jill Carroll in Baghdad and the efforts to secure her release.
+	</narrative>
+
+	<docsetA id = "D0916C-A">
+		<doc id = "AFP_ENG_20060109.0517" />
+		<doc id = "AFP_ENG_20060109.0574" />
+		<doc id = "AFP_ENG_20060110.0001" />
+		<doc id = "AFP_ENG_20060110.0024" />
+		<doc id = "AFP_ENG_20060110.0078" />
+		<doc id = "AFP_ENG_20060110.0430" />
+		<doc id = "APW_ENG_20060111.0159" />
+		<doc id = "LTW_ENG_20060117.0137" />
+		<doc id = "AFP_ENG_20060117.0612" />
+		<doc id = "AFP_ENG_20060117.0629" />
+	</docsetA>
+
+	<docsetB id = "D0916C-B">
+		<doc id = "AFP_ENG_20060118.0550" />
+		<doc id = "AFP_ENG_20060118.0714" />
+		<doc id = "APW_ENG_20060119.0074" />
+		<doc id = "AFP_ENG_20060119.0155" />
+		<doc id = "AFP_ENG_20060119.0175" />
+		<doc id = "NYT_ENG_20060119.0242" />
+		<doc id = "AFP_ENG_20060119.0487" />
+		<doc id = "AFP_ENG_20060119.0599" />
+		<doc id = "AFP_ENG_20060119.0655" />
+		<doc id = "APW_ENG_20060119.1022" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0917C">
+
+	<title> Pope election </title>
+
+	<narrative>
+		Describe developments in the process by which Roman Catholic cardinals choose a successor to Pope John Paul II.
+	</narrative>
+
+	<docsetA id = "D0917C-A">
+		<doc id = "NYT_ENG_20050417.0145" />
+		<doc id = "NYT_ENG_20050417.0157" />
+		<doc id = "APW_ENG_20050418.0013" />
+		<doc id = "NYT_ENG_20050418.0055" />
+		<doc id = "LTW_ENG_20050418.0075" />
+		<doc id = "LTW_ENG_20050418.0086" />
+		<doc id = "LTW_ENG_20050418.0151" />
+		<doc id = "APW_ENG_20050418.0633" />
+		<doc id = "APW_ENG_20050418.0828" />
+		<doc id = "APW_ENG_20050418.1050" />
+	</docsetA>
+
+	<docsetB id = "D0917C-B">
+		<doc id = "NYT_ENG_20050419.0021" />
+		<doc id = "LTW_ENG_20050419.0113" />
+		<doc id = "LTW_ENG_20050419.0159" />
+		<doc id = "AFP_ENG_20050419.0240" />
+		<doc id = "AFP_ENG_20050419.0312" />
+		<doc id = "APW_ENG_20050419.0580" />
+		<doc id = "APW_ENG_20050419.0878" />
+		<doc id = "APW_ENG_20050419.1066" />
+		<doc id = "APW_ENG_20050419.1142" />
+		<doc id = "LTW_ENG_20050420.0005" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0918D">
+
+	<title> Betty Friedan </title>
+
+	<narrative>
+		Report on Betty Friedan's feminist activities.
+	</narrative>
+
+	<docsetA id = "D0918D-A">
+		<doc id = "NYT_ENG_20050307.0076" />
+		<doc id = "NYT_ENG_20050308.0058" />
+		<doc id = "NYT_ENG_20050310.0118" />
+		<doc id = "NYT_ENG_20050502.0117" />
+		<doc id = "LTW_ENG_20050606.0060" />
+		<doc id = "NYT_ENG_20060114.0051" />
+		<doc id = "LTW_ENG_20060204.0020" />
+		<doc id = "LTW_ENG_20060204.0041" />
+		<doc id = "NYT_ENG_20060204.0159" />
+		<doc id = "AFP_ENG_20060204.0517" />
+	</docsetA>
+
+	<docsetB id = "D0918D-B">
+		<doc id = "NYT_ENG_20060206.0103" />
+		<doc id = "APW_ENG_20060206.0965" />
+		<doc id = "NYT_ENG_20060207.0045" />
+		<doc id = "NYT_ENG_20060207.0213" />
+		<doc id = "LTW_ENG_20060208.0025" />
+		<doc id = "CNA_ENG_20060208.0033" />
+		<doc id = "LTW_ENG_20060208.0052" />
+		<doc id = "LTW_ENG_20060208.0055" />
+		<doc id = "LTW_ENG_20060209.0042" />
+		<doc id = "NYT_ENG_20060211.0042" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0919D">
+
+	<title> Marriage of Camilla Parker Bowles to Prince Charles </title>
+
+	<narrative>
+		Report on the marriage of Camilla Parker Bowles to Prince Charles.  Include engagement activities, planning for the wedding, and reaction to the engagement. Do not include Camilla's activities prior to her engagement.
+	</narrative>
+
+	<docsetA id = "D0919D-A">
+		<doc id = "LTW_ENG_20050210.0150" />
+		<doc id = "NYT_ENG_20050210.0163" />
+		<doc id = "APW_ENG_20050210.0240" />
+		<doc id = "APW_ENG_20050210.0327" />
+		<doc id = "APW_ENG_20050210.0342" />
+		<doc id = "APW_ENG_20050210.0366" />
+		<doc id = "APW_ENG_20050210.0384" />
+		<doc id = "APW_ENG_20050210.0526" />
+		<doc id = "APW_ENG_20050210.0733" />
+		<doc id = "APW_ENG_20050210.0892" />
+	</docsetA>
+
+	<docsetB id = "D0919D-B">
+		<doc id = "APW_ENG_20050211.0003" />
+		<doc id = "LTW_ENG_20050211.0006" />
+		<doc id = "CNA_ENG_20050211.0015" />
+		<doc id = "APW_ENG_20050211.0030" />
+		<doc id = "AFP_ENG_20050211.0032" />
+		<doc id = "AFP_ENG_20050211.0098" />
+		<doc id = "AFP_ENG_20050211.0143" />
+		<doc id = "APW_ENG_20050211.0187" />
+		<doc id = "AFP_ENG_20050211.0215" />
+		<doc id = "AFP_ENG_20050211.0223" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0920D">
+
+	<title> Cat Stevens </title>
+
+	<narrative>
+		Provide information about Cat Stevens, aka Yusuf Islam.
+	</narrative>
+
+	<docsetA id = "D0920D-A">
+		<doc id = "APW_ENG_20041001.0331" />
+		<doc id = "NYT_ENG_20041001.0364" />
+		<doc id = "APW_ENG_20041001.0388" />
+		<doc id = "AFP_ENG_20041014.0531" />
+		<doc id = "NYT_ENG_20041015.0066" />
+		<doc id = "APW_ENG_20041108.0295" />
+		<doc id = "APW_ENG_20041112.0438" />
+		<doc id = "AFP_ENG_20041121.0411" />
+		<doc id = "AFP_ENG_20041122.0611" />
+		<doc id = "AFP_ENG_20041125.0630" />
+	</docsetA>
+
+	<docsetB id = "D0920D-B">
+		<doc id = "AFP_ENG_20050112.0668" />
+		<doc id = "AFP_ENG_20050118.0442" />
+		<doc id = "AFP_ENG_20050128.0160" />
+		<doc id = "NYT_ENG_20050130.0182" />
+		<doc id = "AFP_ENG_20050215.0551" />
+		<doc id = "APW_ENG_20050215.0963" />
+		<doc id = "AFP_ENG_20050319.0370" />
+		<doc id = "APW_ENG_20050714.1097" />
+		<doc id = "APW_ENG_20050715.0021" />
+		<doc id = "APW_ENG_20050920.0791" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0921D">
+
+	<title> Michael Jackson </title>
+
+	<narrative>
+		Report on events involving Michael Jackson after his arrest for alleged child molestation.  Include the effect on Jackson, people's reactions to the arrest, and investigations and other preparations for the trial.
+	</narrative>
+
+	<docsetA id = "D0921D-A">
+		<doc id = "APW_ENG_20041001.0117" />
+		<doc id = "APW_ENG_20041016.0047" />
+		<doc id = "APW_ENG_20041102.0022" />
+		<doc id = "AFP_ENG_20041105.0706" />
+		<doc id = "AFP_ENG_20041111.0822" />
+		<doc id = "XIN_ENG_20041117.0235" />
+		<doc id = "APW_ENG_20041119.0163" />
+		<doc id = "AFP_ENG_20041123.0734" />
+		<doc id = "AFP_ENG_20041203.0617" />
+		<doc id = "AFP_ENG_20041206.0011" />
+	</docsetA>
+
+	<docsetB id = "D0921D-B">
+		<doc id = "AFP_ENG_20050131.0631" />
+		<doc id = "AFP_ENG_20050131.0718" />
+		<doc id = "AFP_ENG_20050215.0529" />
+		<doc id = "AFP_ENG_20050215.0682" />
+		<doc id = "AFP_ENG_20050216.0599" />
+		<doc id = "AFP_ENG_20050216.0803" />
+		<doc id = "AFP_ENG_20050216.0816" />
+		<doc id = "APW_ENG_20050223.1031" />
+		<doc id = "AFP_ENG_20050228.0545" />
+		<doc id = "AFP_ENG_20050228.0560" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0922D">
+
+	<title> Patriot Act </title>
+
+	<narrative>
+		Provide information regarding the renewal of the US Patriot Act, passed shortly after the September 11, 2001 terrorist attacks.
+	</narrative>
+
+	<docsetA id = "D0922D-A">
+		<doc id = "NYT_ENG_20041004.0143" />
+		<doc id = "APW_ENG_20041025.0389" />
+		<doc id = "NYT_ENG_20041026.0202" />
+		<doc id = "APW_ENG_20041112.0362" />
+		<doc id = "NYT_ENG_20050214.0176" />
+		<doc id = "APW_ENG_20050214.0666" />
+		<doc id = "APW_ENG_20050317.0771" />
+		<doc id = "LTW_ENG_20050322.0139" />
+		<doc id = "NYT_ENG_20050322.0262" />
+		<doc id = "APW_ENG_20050323.0358" />
+	</docsetA>
+
+	<docsetB id = "D0922D-B">
+		<doc id = "NYT_ENG_20050404.0105" />
+		<doc id = "NYT_ENG_20050404.0223" />
+		<doc id = "APW_ENG_20050405.0123" />
+		<doc id = "NYT_ENG_20050405.0177" />
+		<doc id = "LTW_ENG_20050406.0146" />
+		<doc id = "CNA_ENG_20050407.0005" />
+		<doc id = "NYT_ENG_20050409.0186" />
+		<doc id = "APW_ENG_20050511.0143" />
+		<doc id = "NYT_ENG_20050604.0145" />
+		<doc id = "NYT_ENG_20050607.0136" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0923D">
+
+	<title> Real ID Act </title>
+
+	<narrative>
+		Report on issues regarding the Real ID Act, both intended and unintended.
+	</narrative>
+
+	<docsetA id = "D0923D-A">
+		<doc id = "LTW_ENG_20050406.0137" />
+		<doc id = "NYT_ENG_20050425.0285" />
+		<doc id = "NYT_ENG_20050426.0123" />
+		<doc id = "NYT_ENG_20050427.0143" />
+		<doc id = "NYT_ENG_20050427.0271" />
+		<doc id = "NYT_ENG_20050503.0115" />
+		<doc id = "XIN_ENG_20050505.0193" />
+		<doc id = "NYT_ENG_20050506.0036" />
+		<doc id = "APW_ENG_20050511.0100" />
+		<doc id = "APW_ENG_20050511.1183" />
+	</docsetA>
+
+	<docsetB id = "D0923D-B">
+		<doc id = "XIN_ENG_20050513.0245" />
+		<doc id = "LTW_ENG_20050628.0034" />
+		<doc id = "NYT_ENG_20050718.0299" />
+		<doc id = "LTW_ENG_20050908.0009" />
+		<doc id = "NYT_ENG_20050913.0142" />
+		<doc id = "LTW_ENG_20050914.0147" />
+		<doc id = "APW_ENG_20060113.0013" />
+		<doc id = "NYT_ENG_20060225.0089" />
+		<doc id = "NYT_ENG_20060307.0203" />
+		<doc id = "LTW_ENG_20060309.0117" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0924D">
+
+	<title> Vioxx </title>
+
+	<narrative>
+		Report on events that occurred following Merck's decision to take Vioxx off the market.
+	</narrative>
+
+	<docsetA id = "D0924D-A">
+		<doc id = "AFP_ENG_20041001.0380" />
+		<doc id = "NYT_ENG_20041004.0309" />
+		<doc id = "NYT_ENG_20041006.0378" />
+		<doc id = "AFP_ENG_20041007.0512" />
+		<doc id = "AFP_ENG_20041008.0499" />
+		<doc id = "APW_ENG_20041021.0243" />
+		<doc id = "AFP_ENG_20041021.0497" />
+		<doc id = "APW_ENG_20041101.0307" />
+		<doc id = "AFP_ENG_20041103.0497" />
+		<doc id = "NYT_ENG_20041104.0279" />
+	</docsetA>
+
+	<docsetB id = "D0924D-B">
+		<doc id = "AFP_ENG_20041105.0545" />
+		<doc id = "APW_ENG_20041108.0409" />
+		<doc id = "AFP_ENG_20041109.0409" />
+		<doc id = "LTW_ENG_20041113.0022" />
+		<doc id = "NYT_ENG_20041117.0307" />
+		<doc id = "AFP_ENG_20041118.0554" />
+		<doc id = "CNA_ENG_20041120.0011" />
+		<doc id = "NYT_ENG_20041130.0209" />
+		<doc id = "LTW_ENG_20041204.0028" />
+		<doc id = "CNA_ENG_20041218.0010" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0925E">
+
+	<title> Apple Computer switch to Intel chips </title>
+
+	<narrative>
+		Trace plans for and progress of the switch to Intel chips by Apple Computer.
+	</narrative>
+
+	<docsetA id = "D0925E-A">
+		<doc id = "NYT_ENG_20050605.0062" />
+		<doc id = "APW_ENG_20050606.0057" />
+		<doc id = "AFP_ENG_20050606.0063" />
+		<doc id = "LTW_ENG_20050606.0159" />
+		<doc id = "NYT_ENG_20050606.0194" />
+		<doc id = "XIN_ENG_20050606.0245" />
+		<doc id = "NYT_ENG_20050606.0333" />
+		<doc id = "AFP_ENG_20050606.0574" />
+		<doc id = "APW_ENG_20050606.0934" />
+		<doc id = "APW_ENG_20050606.1017" />
+	</docsetA>
+
+	<docsetB id = "D0925E-B">
+		<doc id = "APW_ENG_20050607.0025" />
+		<doc id = "NYT_ENG_20050609.0281" />
+		<doc id = "NYT_ENG_20050610.0157" />
+		<doc id = "APW_ENG_20050610.1116" />
+		<doc id = "NYT_ENG_20060109.0091" />
+		<doc id = "NYT_ENG_20060110.0188" />
+		<doc id = "APW_ENG_20060110.0960" />
+		<doc id = "APW_ENG_20060110.1141" />
+		<doc id = "XIN_ENG_20060111.0002" />
+		<doc id = "NYT_ENG_20060111.0022" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0926E">
+
+	<title> Fossett and Global Flyer </title>
+
+	<narrative>
+		Trace Steve Fossett's flight around the world in the Global Flyer.
+	</narrative>
+
+	<docsetA id = "D0926E-A">
+		<doc id = "NYT_ENG_20050129.0130" />
+		<doc id = "AFP_ENG_20050208.0214" />
+		<doc id = "AFP_ENG_20050227.0066" />
+		<doc id = "NYT_ENG_20050227.0122" />
+		<doc id = "AFP_ENG_20050301.0022" />
+		<doc id = "APW_ENG_20050301.0141" />
+		<doc id = "AFP_ENG_20050301.0473" />
+		<doc id = "AFP_ENG_20050301.0581" />
+		<doc id = "AFP_ENG_20050301.0669" />
+		<doc id = "AFP_ENG_20050301.0755" />
+	</docsetA>
+
+	<docsetB id = "D0926E-B">
+		<doc id = "AFP_ENG_20050302.0029" />
+		<doc id = "AFP_ENG_20050302.0136" />
+		<doc id = "NYT_ENG_20050302.0183" />
+		<doc id = "AFP_ENG_20050302.0379" />
+		<doc id = "AFP_ENG_20050302.0571" />
+		<doc id = "AFP_ENG_20050302.0728" />
+		<doc id = "AFP_ENG_20050303.0143" />
+		<doc id = "LTW_ENG_20050303.0146" />
+		<doc id = "NYT_ENG_20050303.0175" />
+		<doc id = "NYT_ENG_20050303.0193" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0927E">
+
+	<title> Peter Jennings </title>
+
+	<narrative>
+		Describe Peter Jennings' lung cancer and its effects.
+	</narrative>
+
+	<docsetA id = "D0927E-A">
+		<doc id = "NYT_ENG_20050405.0089" />
+		<doc id = "NYT_ENG_20050405.0152" />
+		<doc id = "NYT_ENG_20050405.0268" />
+		<doc id = "APW_ENG_20050406.0006" />
+		<doc id = "LTW_ENG_20050406.0036" />
+		<doc id = "LTW_ENG_20050406.0071" />
+		<doc id = "LTW_ENG_20050411.0065" />
+		<doc id = "LTW_ENG_20050412.0022" />
+		<doc id = "NYT_ENG_20050417.0063" />
+		<doc id = "LTW_ENG_20050429.0144" />
+	</docsetA>
+
+	<docsetB id = "D0927E-B">
+		<doc id = "LTW_ENG_20050808.0002" />
+		<doc id = "NYT_ENG_20050808.0004" />
+		<doc id = "LTW_ENG_20050808.0006" />
+		<doc id = "XIN_ENG_20050808.0013" />
+		<doc id = "LTW_ENG_20050808.0075" />
+		<doc id = "LTW_ENG_20050808.0080" />
+		<doc id = "APW_ENG_20050808.0649" />
+		<doc id = "LTW_ENG_20050920.0107" />
+		<doc id = "APW_ENG_20050920.1070" />
+		<doc id = "NYT_ENG_20050921.0004" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0928E">
+
+	<title> trials of Tyco's Dennis Kozlowski </title>
+
+	<narrative>
+		Follow the legal proceedings in the criminal trials of Tyco Chief Dennis Kozlowski.
+	</narrative>
+
+	<docsetA id = "D0928E-A">
+		<doc id = "APW_ENG_20041016.0064" />
+		<doc id = "APW_ENG_20041102.0036" />
+		<doc id = "APW_ENG_20050114.1117" />
+		<doc id = "NYT_ENG_20050115.0080" />
+		<doc id = "NYT_ENG_20050118.0105" />
+		<doc id = "APW_ENG_20050118.1133" />
+		<doc id = "NYT_ENG_20050125.0248" />
+		<doc id = "NYT_ENG_20050126.0293" />
+		<doc id = "LTW_ENG_20050127.0006" />
+		<doc id = "NYT_ENG_20050127.0254" />
+	</docsetA>
+
+	<docsetB id = "D0928E-B">
+		<doc id = "APW_ENG_20050203.0137" />
+		<doc id = "APW_ENG_20050222.0743" />
+		<doc id = "APW_ENG_20050224.1027" />
+		<doc id = "NYT_ENG_20050427.0238" />
+		<doc id = "APW_ENG_20050427.1325" />
+		<doc id = "NYT_ENG_20050428.0281" />
+		<doc id = "APW_ENG_20050429.0079" />
+		<doc id = "NYT_ENG_20050502.0238" />
+		<doc id = "APW_ENG_20050502.1112" />
+		<doc id = "APW_ENG_20050504.0084" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0929E">
+
+	<title> Hurricane Rita </title>
+
+	<narrative>
+		Describe preparations for Hurricane Rita and estimates of its strength.
+	</narrative>
+
+	<docsetA id = "D0929E-A">
+		<doc id = "XIN_ENG_20050919.0201" />
+		<doc id = "NYT_ENG_20050920.0246" />
+		<doc id = "AFP_ENG_20050920.0413" />
+		<doc id = "AFP_ENG_20050920.0534" />
+		<doc id = "AFP_ENG_20050920.0545" />
+		<doc id = "AFP_ENG_20050920.0561" />
+		<doc id = "AFP_ENG_20050920.0614" />
+		<doc id = "AFP_ENG_20050920.0630" />
+		<doc id = "AFP_ENG_20050920.0633" />
+		<doc id = "AFP_ENG_20050920.0664" />
+	</docsetA>
+
+	<docsetB id = "D0929E-B">
+		<doc id = "AFP_ENG_20050921.0010" />
+		<doc id = "AFP_ENG_20050921.0045" />
+		<doc id = "AFP_ENG_20050921.0142" />
+		<doc id = "AFP_ENG_20050921.0191" />
+		<doc id = "XIN_ENG_20050921.0265" />
+		<doc id = "XIN_ENG_20050921.0296" />
+		<doc id = "AFP_ENG_20050921.0448" />
+		<doc id = "AFP_ENG_20050921.0489" />
+		<doc id = "AFP_ENG_20050921.0529" />
+		<doc id = "AFP_ENG_20050921.0612" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0930F">
+
+	<title> carbon sequestration </title>
+
+	<narrative>
+		Where and how has carbon sequestration been used? What are plans or support for using it in the future?
+	</narrative>
+
+	<docsetA id = "D0930F-A">
+		<doc id = "NYT_ENG_20041004.0404" />
+		<doc id = "AFP_ENG_20050203.0430" />
+		<doc id = "NYT_ENG_20050226.0014" />
+		<doc id = "NYT_ENG_20050520.0273" />
+		<doc id = "LTW_ENG_20050608.0124" />
+		<doc id = "AFP_ENG_20050614.0312" />
+		<doc id = "APW_ENG_20050630.0563" />
+		<doc id = "AFP_ENG_20050708.0536" />
+		<doc id = "NYT_ENG_20050725.0132" />
+		<doc id = "NYT_ENG_20050818.0382" />
+	</docsetA>
+
+	<docsetB id = "D0930F-B">
+		<doc id = "APW_ENG_20050927.0054" />
+		<doc id = "APW_ENG_20050928.0879" />
+		<doc id = "XIN_ENG_20051115.0424" />
+		<doc id = "APW_ENG_20051128.1129" />
+		<doc id = "NYT_ENG_20051207.0249" />
+		<doc id = "AFP_ENG_20060124.0446" />
+		<doc id = "NYT_ENG_20060210.0166" />
+		<doc id = "AFP_ENG_20060307.0272" />
+		<doc id = "APW_ENG_20060308.0422" />
+		<doc id = "APW_ENG_20060314.0536" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0931F">
+
+	<title> A.Q. Khan nuclear technology transfer </title>
+
+	<narrative>
+		Report information on the activities, motives, and connections of Dr. Abdul Qadeer Khan relating to the transfer of nuclear technology. Also report relevant government responses.
+	</narrative>
+
+	<docsetA id = "D0931F-A">
+		<doc id = "AFP_ENG_20041117.0216" />
+		<doc id = "APW_ENG_20041118.0169" />
+		<doc id = "XIN_ENG_20041122.0112" />
+		<doc id = "NYT_ENG_20041123.0322" />
+		<doc id = "APW_ENG_20041128.0012" />
+		<doc id = "AFP_ENG_20041128.0057" />
+		<doc id = "LTW_ENG_20041205.0021" />
+		<doc id = "NYT_ENG_20041225.0036" />
+		<doc id = "NYT_ENG_20050107.0350" />
+		<doc id = "AFP_ENG_20050117.0292" />
+	</docsetA>
+
+	<docsetB id = "D0931F-B">
+		<doc id = "AFP_ENG_20050206.0417" />
+		<doc id = "AFP_ENG_20050207.0099" />
+		<doc id = "XIN_ENG_20050207.0144" />
+		<doc id = "AFP_ENG_20050207.0241" />
+		<doc id = "APW_ENG_20050207.0446" />
+		<doc id = "XIN_ENG_20050209.0136" />
+		<doc id = "APW_ENG_20050209.0144" />
+		<doc id = "AFP_ENG_20050217.0453" />
+		<doc id = "AFP_ENG_20050223.0010" />
+		<doc id = "LTW_ENG_20050226.0033" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0932F">
+
+	<title> plastic grocery bags </title>
+
+	<narrative>
+		What measures are governments taking to deal with the problem of plastic grocery bags? What are reactions to the measures?
+	</narrative>
+
+	<docsetA id = "D0932F-A">
+		<doc id = "XIN_ENG_20041004.0201" />
+		<doc id = "APW_ENG_20041120.0058" />
+		<doc id = "NYT_ENG_20041120.0116" />
+		<doc id = "XIN_ENG_20041130.0023" />
+		<doc id = "NYT_ENG_20050127.0002" />
+		<doc id = "NYT_ENG_20050203.0018" />
+		<doc id = "AFP_ENG_20050223.0381" />
+		<doc id = "XIN_ENG_20050228.0018" />
+		<doc id = "AFP_ENG_20050304.0359" />
+		<doc id = "XIN_ENG_20050310.0030" />
+	</docsetA>
+
+	<docsetB id = "D0932F-B">
+		<doc id = "XIN_ENG_20050411.0051" />
+		<doc id = "AFP_ENG_20050613.0065" />
+		<doc id = "XIN_ENG_20050707.0027" />
+		<doc id = "AFP_ENG_20050713.0303" />
+		<doc id = "AFP_ENG_20050824.0360" />
+		<doc id = "APW_ENG_20050824.0633" />
+		<doc id = "XIN_ENG_20051010.0373" />
+		<doc id = "CNA_ENG_20060123.0041" />
+		<doc id = "AFP_ENG_20060124.0244" />
+		<doc id = "XIN_ENG_20060330.0242" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0933F">
+
+	<title> cause of Schizophrenia </title>
+
+	<narrative>
+		Report theories, developments and progress in the search for a cause of schizophrenia. Include things that are found not to cause the disease.
+	</narrative>
+
+	<docsetA id = "D0933F-A">
+		<doc id = "AFP_ENG_20041021.0262" />
+		<doc id = "NYT_ENG_20050116.0120" />
+		<doc id = "AFP_ENG_20050202.0511" />
+		<doc id = "NYT_ENG_20050215.0078" />
+		<doc id = "AFP_ENG_20050217.0251" />
+		<doc id = "NYT_ENG_20050321.0117" />
+		<doc id = "NYT_ENG_20050328.0087" />
+		<doc id = "XIN_ENG_20050506.0104" />
+		<doc id = "XIN_ENG_20050606.0239" />
+		<doc id = "NYT_ENG_20050704.0065" />
+	</docsetA>
+
+	<docsetB id = "D0933F-B">
+		<doc id = "APW_ENG_20050802.1034" />
+		<doc id = "NYT_ENG_20050906.0096" />
+		<doc id = "AFP_ENG_20051006.0354" />
+		<doc id = "NYT_ENG_20051029.0115" />
+		<doc id = "LTW_ENG_20051102.0035" />
+		<doc id = "XIN_ENG_20051117.0403" />
+		<doc id = "LTW_ENG_20051130.0153" />
+		<doc id = "NYT_ENG_20060125.0281" />
+		<doc id = "NYT_ENG_20060130.0061" />
+		<doc id = "NYT_ENG_20060130.0088" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0934G">
+
+	<title> death of Yassar Arafat </title>
+
+	<narrative>
+		Discuss the final illness and death of Yassar Arafat and the funeral preparations.
+	</narrative>
+
+	<docsetA id = "D0934G-A">
+		<doc id = "NYT_ENG_20041108.0035" />
+		<doc id = "AFP_ENG_20041109.0160" />
+		<doc id = "XIN_ENG_20041109.0206" />
+		<doc id = "XIN_ENG_20041109.0219" />
+		<doc id = "APW_ENG_20041109.0244" />
+		<doc id = "XIN_ENG_20041109.0324" />
+		<doc id = "AFP_ENG_20041109.0393" />
+		<doc id = "AFP_ENG_20041109.0554" />
+		<doc id = "AFP_ENG_20041109.0601" />
+		<doc id = "AFP_ENG_20041109.0613" />
+	</docsetA>
+
+	<docsetB id = "D0934G-B">
+		<doc id = "XIN_ENG_20041110.0075" />
+		<doc id = "LTW_ENG_20041110.0100" />
+		<doc id = "AFP_ENG_20041110.0133" />
+		<doc id = "XIN_ENG_20041110.0136" />
+		<doc id = "XIN_ENG_20041110.0192" />
+		<doc id = "AFP_ENG_20041110.0252" />
+		<doc id = "XIN_ENG_20041110.0378" />
+		<doc id = "AFP_ENG_20041111.0014" />
+		<doc id = "AFP_ENG_20041111.0020" />
+		<doc id = "XIN_ENG_20041111.0056" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0935G">
+
+	<title> return of Major League Baseball to Washington </title>
+
+	<narrative>
+		Describe the establishment of the MLB team in Washington and its initial impact.
+	</narrative>
+
+	<docsetA id = "D0935G-A">
+		<doc id = "NYT_ENG_20041122.0349" />
+		<doc id = "AFP_ENG_20041203.0577" />
+		<doc id = "NYT_ENG_20041215.0303" />
+		<doc id = "AFP_ENG_20041216.0538" />
+		<doc id = "NYT_ENG_20041221.0028" />
+		<doc id = "APW_ENG_20041222.0044" />
+		<doc id = "AFP_ENG_20050121.0590" />
+		<doc id = "NYT_ENG_20050302.0255" />
+		<doc id = "NYT_ENG_20050322.0038" />
+		<doc id = "LTW_ENG_20050329.0006" />
+	</docsetA>
+
+	<docsetB id = "D0935G-B">
+		<doc id = "APW_ENG_20050407.0823" />
+		<doc id = "NYT_ENG_20050413.0202" />
+		<doc id = "NYT_ENG_20050423.0074" />
+		<doc id = "APW_ENG_20050426.1201" />
+		<doc id = "NYT_ENG_20050506.0031" />
+		<doc id = "NYT_ENG_20050611.0037" />
+		<doc id = "LTW_ENG_20050621.0080" />
+		<doc id = "NYT_ENG_20050626.0185" />
+		<doc id = "NYT_ENG_20050627.0351" />
+		<doc id = "NYT_ENG_20050629.0276" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0936G">
+
+	<title> filling Sandra Day O'Connor's Supreme Court seat </title>
+
+	<narrative>
+		Discuss the resignation of Sandra Day O'Connor from the Supreme Court and the selection of her replacement.
+	</narrative>
+
+	<docsetA id = "D0936G-A">
+		<doc id = "XIN_ENG_20050701.0185" />
+		<doc id = "AFP_ENG_20050701.0385" />
+		<doc id = "AFP_ENG_20050701.0415" />
+		<doc id = "AFP_ENG_20050701.0624" />
+		<doc id = "AFP_ENG_20050702.0028" />
+		<doc id = "NYT_ENG_20050702.0183" />
+		<doc id = "AFP_ENG_20050706.0021" />
+		<doc id = "AFP_ENG_20050706.0254" />
+		<doc id = "APW_ENG_20050709.0647" />
+		<doc id = "NYT_ENG_20050714.0088" />
+	</docsetA>
+
+	<docsetB id = "D0936G-B">
+		<doc id = "LTW_ENG_20050719.0163" />
+		<doc id = "NYT_ENG_20050719.0270" />
+		<doc id = "XIN_ENG_20050719.0391" />
+		<doc id = "AFP_ENG_20050719.0713" />
+		<doc id = "NYT_ENG_20050720.0012" />
+		<doc id = "LTW_ENG_20050720.0114" />
+		<doc id = "APW_ENG_20050720.0513" />
+		<doc id = "NYT_ENG_20050723.0094" />
+		<doc id = "LTW_ENG_20050725.0049" />
+		<doc id = "NYT_ENG_20050725.0305" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0937G">
+
+	<title> Vice President Cheney shooting Harry Whittington </title>
+
+	<narrative>
+		Discuss the shooting of Harry Whittington by Vice President Cheney and the results and reactions to this incident.
+	</narrative>
+
+	<docsetA id = "D0937G-A">
+		<doc id = "LTW_ENG_20060212.0053" />
+		<doc id = "NYT_ENG_20060212.0196" />
+		<doc id = "XIN_ENG_20060212.0242" />
+		<doc id = "APW_ENG_20060212.0608" />
+		<doc id = "LTW_ENG_20060213.0135" />
+		<doc id = "NYT_ENG_20060213.0144" />
+		<doc id = "NYT_ENG_20060213.0277" />
+		<doc id = "AFP_ENG_20060213.0487" />
+		<doc id = "AFP_ENG_20060213.0664" />
+		<doc id = "AFP_ENG_20060213.0741" />
+	</docsetA>
+
+	<docsetB id = "D0937G-B">
+		<doc id = "NYT_ENG_20060214.0118" />
+		<doc id = "LTW_ENG_20060214.0157" />
+		<doc id = "NYT_ENG_20060214.0246" />
+		<doc id = "XIN_ENG_20060214.0268" />
+		<doc id = "NYT_ENG_20060214.0327" />
+		<doc id = "NYT_ENG_20060214.0368" />
+		<doc id = "AFP_ENG_20060214.0848" />
+		<doc id = "AFP_ENG_20060215.0009" />
+		<doc id = "LTW_ENG_20060215.0117" />
+		<doc id = "LTW_ENG_20060215.0147" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0938G">
+
+	<title> preparations and planning for World Trade Center Memorial </title>
+
+	<narrative>
+		Discuss the planning, preparations, and funding issues for the memorial to the 9/11 World Trade Center disaster.
+	</narrative>
+
+	<docsetA id = "D0938G-A">
+		<doc id = "AFP_ENG_20041122.0626" />
+		<doc id = "NYT_ENG_20041123.0002" />
+		<doc id = "NYT_ENG_20041201.0359" />
+		<doc id = "AFP_ENG_20041201.0756" />
+		<doc id = "NYT_ENG_20041216.0211" />
+		<doc id = "XIN_ENG_20041216.0343" />
+		<doc id = "NYT_ENG_20050105.0346" />
+		<doc id = "APW_ENG_20050106.0112" />
+		<doc id = "APW_ENG_20050226.0636" />
+		<doc id = "NYT_ENG_20050302.0320" />
+	</docsetA>
+
+	<docsetB id = "D0938G-B">
+		<doc id = "NYT_ENG_20050317.0005" />
+		<doc id = "NYT_ENG_20050408.0017" />
+		<doc id = "NYT_ENG_20050505.0357" />
+		<doc id = "NYT_ENG_20050506.0074" />
+		<doc id = "NYT_ENG_20050509.0268" />
+		<doc id = "NYT_ENG_20050511.0312" />
+		<doc id = "XIN_ENG_20050616.0303" />
+		<doc id = "NYT_ENG_20050711.0342" />
+		<doc id = "NYT_ENG_20050725.0352" />
+		<doc id = "NYT_ENG_20050729.0049" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0939H">
+
+	<title> Glendale </title>
+
+	<narrative>
+		Describe the Glendale train crash, the cause of the crash, and the arrest and trial of the man accused of causing it.
+	</narrative>
+
+	<docsetA id = "D0939H-A">
+		<doc id = "LTW_ENG_20050126.0115" />
+		<doc id = "LTW_ENG_20050126.0117" />
+		<doc id = "NYT_ENG_20050126.0234" />
+		<doc id = "XIN_ENG_20050126.0287" />
+		<doc id = "NYT_ENG_20050126.0303" />
+		<doc id = "AFP_ENG_20050126.0676" />
+		<doc id = "NYT_ENG_20050127.0003" />
+		<doc id = "NYT_ENG_20050127.0004" />
+		<doc id = "NYT_ENG_20050127.0214" />
+		<doc id = "NYT_ENG_20050127.0350" />
+	</docsetA>
+
+	<docsetB id = "D0939H-B">
+		<doc id = "NYT_ENG_20050128.0015" />
+		<doc id = "NYT_ENG_20050128.0016" />
+		<doc id = "LTW_ENG_20050129.0001" />
+		<doc id = "NYT_ENG_20050205.0005" />
+		<doc id = "NYT_ENG_20050218.0007" />
+		<doc id = "NYT_ENG_20050218.0160" />
+		<doc id = "LTW_ENG_20050315.0146" />
+		<doc id = "NYT_ENG_20050506.0002" />
+		<doc id = "APW_ENG_20050520.0083" />
+		<doc id = "APW_ENG_20050826.0935" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0940H">
+
+	<title> opening of Disneyland in Hong Kong </title>
+
+	<narrative>
+		Follow the developments connected with the opening of Disneyland in Hong Kong.
+	</narrative>
+
+	<docsetA id = "D0940H-A">
+		<doc id = "XIN_ENG_20050622.0194" />
+		<doc id = "APW_ENG_20050626.0150" />
+		<doc id = "XIN_ENG_20050701.0100" />
+		<doc id = "XIN_ENG_20050701.0179" />
+		<doc id = "XIN_ENG_20050704.0125" />
+		<doc id = "APW_ENG_20050904.0020" />
+		<doc id = "APW_ENG_20050908.0042" />
+		<doc id = "APW_ENG_20050908.0161" />
+		<doc id = "XIN_ENG_20050908.0208" />
+		<doc id = "APW_ENG_20050910.0125" />
+	</docsetA>
+
+	<docsetB id = "D0940H-B">
+		<doc id = "XIN_ENG_20050911.0242" />
+		<doc id = "APW_ENG_20050912.0155" />
+		<doc id = "APW_ENG_20050923.0159" />
+		<doc id = "XIN_ENG_20051012.0279" />
+		<doc id = "APW_ENG_20051015.0216" />
+		<doc id = "APW_ENG_20051108.0114" />
+		<doc id = "AFP_ENG_20051120.0462" />
+		<doc id = "APW_ENG_20051121.0053" />
+		<doc id = "AFP_ENG_20051122.0138" />
+		<doc id = "APW_ENG_20051124.0158" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0941H">
+
+	<title> Huygens probe </title>
+
+	<narrative>
+		Track the progress of the Huygen space probe.
+	</narrative>
+
+	<docsetA id = "D0941H-A">
+		<doc id = "NYT_ENG_20041222.0130" />
+		<doc id = "NYT_ENG_20041224.0012" />
+		<doc id = "APW_ENG_20041224.0096" />
+		<doc id = "NYT_ENG_20041224.0141" />
+		<doc id = "XIN_ENG_20041224.0228" />
+		<doc id = "AFP_ENG_20041224.0396" />
+		<doc id = "LTW_ENG_20041225.0002" />
+		<doc id = "APW_ENG_20041225.0006" />
+		<doc id = "XIN_ENG_20041225.0007" />
+		<doc id = "AFP_ENG_20041225.0008" />
+	</docsetA>
+
+	<docsetB id = "D0941H-B">
+		<doc id = "NYT_ENG_20050114.0054" />
+		<doc id = "LTW_ENG_20050114.0114" />
+		<doc id = "XIN_ENG_20050114.0131" />
+		<doc id = "NYT_ENG_20050114.0145" />
+		<doc id = "XIN_ENG_20050114.0184" />
+		<doc id = "NYT_ENG_20050114.0250" />
+		<doc id = "XIN_ENG_20050114.0329" />
+		<doc id = "AFP_ENG_20050114.0447" />
+		<doc id = "AFP_ENG_20050114.0525" />
+		<doc id = "NYT_ENG_20050115.0001" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0942H">
+
+	<title> PRC's anti-secession law </title>
+
+	<narrative>
+		Report the developments in the PRC's enactment of an anti-secession law and reactions to that law.
+	</narrative>
+
+	<docsetA id = "D0942H-A">
+		<doc id = "CNA_ENG_20050105.0024" />
+		<doc id = "CNA_ENG_20050121.0002" />
+		<doc id = "CNA_ENG_20050124.0045" />
+		<doc id = "CNA_ENG_20050214.0032" />
+		<doc id = "CNA_ENG_20050215.0032" />
+		<doc id = "CNA_ENG_20050222.0027" />
+		<doc id = "CNA_ENG_20050303.0008" />
+		<doc id = "XIN_ENG_20050303.0410" />
+		<doc id = "XIN_ENG_20050307.0330" />
+		<doc id = "AFP_ENG_20050307.0705" />
+	</docsetA>
+
+	<docsetB id = "D0942H-B">
+		<doc id = "XIN_ENG_20050313.0202" />
+		<doc id = "XIN_ENG_20050313.0237" />
+		<doc id = "CNA_ENG_20050314.0006" />
+		<doc id = "AFP_ENG_20050314.0363" />
+		<doc id = "AFP_ENG_20050315.0021" />
+		<doc id = "AFP_ENG_20050315.0778" />
+		<doc id = "XIN_ENG_20050316.0087" />
+		<doc id = "AFP_ENG_20050316.0819" />
+		<doc id = "XIN_ENG_20050318.0152" />
+		<doc id = "XIN_ENG_20050321.0158" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0943H">
+
+	<title> trial for two suspects in Air India bombings </title>
+
+	<narrative>
+		Trace developments in the trial of Ripudaman Singh Malik and Ajaib Singh Bagri, two suspects in the Air India bombings.
+	</narrative>
+
+	<docsetA id = "D0943H-A">
+		<doc id = "APW_ENG_20041019.0465" />
+		<doc id = "AFP_ENG_20041019.0488" />
+		<doc id = "APW_ENG_20041101.0367" />
+		<doc id = "AFP_ENG_20041101.0711" />
+		<doc id = "NYT_ENG_20041102.0198" />
+		<doc id = "APW_ENG_20041108.0397" />
+		<doc id = "APW_ENG_20041116.0013" />
+		<doc id = "APW_ENG_20041204.0008" />
+		<doc id = "AFP_ENG_20041204.0020" />
+		<doc id = "AFP_ENG_20041205.0062" />
+	</docsetA>
+
+	<docsetB id = "D0943H-B">
+		<doc id = "LTW_ENG_20050316.0132" />
+		<doc id = "NYT_ENG_20050316.0165" />
+		<doc id = "XIN_ENG_20050316.0382" />
+		<doc id = "AFP_ENG_20050316.0690" />
+		<doc id = "AFP_ENG_20050316.0811" />
+		<doc id = "APW_ENG_20050316.1113" />
+		<doc id = "APW_ENG_20050316.1123" />
+		<doc id = "AFP_ENG_20050317.0055" />
+		<doc id = "APW_ENG_20050317.0080" />
+		<doc id = "AFP_ENG_20050317.0470" />
+	</docsetB>
+
+</topic>
+
+<topic id = "D0944H">
+
+	<title> Roper vs. Simmons Supreme Court case </title>
+
+	<narrative>
+		Track developments in the Supreme Court's consideration of the juvenile death penalty in the Roper vs. Simmons case.
+	</narrative>
+
+	<docsetA id = "D0944H-A">
+		<doc id = "NYT_ENG_20041001.0042" />
+		<doc id = "NYT_ENG_20041002.0181" />
+		<doc id = "LTW_ENG_20041003.0006" />
+		<doc id = "LTW_ENG_20041003.0021" />
+		<doc id = "NYT_ENG_20041003.0113" />
+		<doc id = "APW_ENG_20041010.0048" />
+		<doc id = "LTW_ENG_20041013.0097" />
+		<doc id = "LTW_ENG_20041013.0109" />
+		<doc id = "APW_ENG_20041013.0452" />
+		<doc id = "AFP_ENG_20041013.0616" />
+	</docsetA>
+
+	<docsetB id = "D0944H-B">
+		<doc id = "NYT_ENG_20050301.0233" />
+		<doc id = "NYT_ENG_20050301.0295" />
+		<doc id = "NYT_ENG_20050301.0308" />
+		<doc id = "AFP_ENG_20050301.0430" />
+		<doc id = "LTW_ENG_20050302.0069" />
+		<doc id = "APW_ENG_20050302.0233" />
+		<doc id = "LTW_ENG_20050307.0075" />
+		<doc id = "NYT_ENG_20050307.0221" />
+		<doc id = "NYT_ENG_20050314.0096" />
+		<doc id = "LTW_ENG_20050318.0101" />
+	</docsetB>
+
+</topic>
+
+</TACtaskdata>
