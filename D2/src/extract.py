@@ -110,6 +110,9 @@ def transform_doc_id_to_path(doc_id):
     if year not in ["1996", "1997", "1998", "1999", "2000", "2004", "2005", "2006"]:
       path = f"/dropbox/23-24/575x/TAC_2010_KBP_Source_Data/data/2009/nw/{dir_name}/{year}{month}{day}/{doc_id}.LDC2009T13.sgm"
 
+    if year == "2006" and month == "10":
+      path = f"/dropbox/23-24/575x/TAC_2010_KBP_Source_Data/data/2009/nw/{dir_name}/{year}{month}{day}/{doc_id}.LDC2007T07.sgm"
+    
     return path
 
 # for item in training_result_ids:
