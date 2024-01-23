@@ -25,17 +25,22 @@ Location of all source code
   - Get individual sentence by `doc.TEXT.findall(“P”)`
 
 
-#### Documents/
+#### data/
+##### 2009_TAC
 - Including the 3 guided summary xml files for `training`, `dev` and `eval` set
 - The data come from **TAC 2010 Guided Summarization task**
 - `devtest` and `evaltest` each has an accompanying `categories.txt` file that captures the 5 types of topics occurred in the docset
+##### selected_files
 
-#### outputs
+
+#### outputs/
 - Including the results from each of the 3 sets respectively under `{training|devtest|evaltest}_output/`
   - Create sub directories named by `docsetA_id` (e.g., D0901A-A) by joining `output_directory` with `docID_docsetID_pairs[docID]`
     -  Store the outputs in each sub file of the above by the `doc_id` (e.g.,  XIN_ENG_20041113.0001)
   -  In total, 71 docsetA sub directories under `training_output/`, 88 under `devtest_output` and 44 under `evaltest_output`
 
+
+#### results/
 
 ### Anomalies & Missing Files Handling
 - XIN docs only exist after 2000. For these files, we use Fei's convention to find th path.
