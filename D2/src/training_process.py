@@ -68,17 +68,13 @@ def get_docsetID_docID_match(data, docID_docsetID_pairs):
                 
 if __name__ == "__main__":
     training_xml = sys.argv[1]
-    dev_xml = sys.argv[2]
-    eval_xml = sys.argv[3]
-    input_directory = sys.argv[4]
-    output_directory = sys.argv[5]
+    input_directory = sys.argv[2]
+    output_directory = sys.argv[3]
     
     docID_docsetID_pairs = {} # The name of the subdirectory is the same as the docsetA id
 
-    with open(training_xml, "r") as training, open(dev_xml, "r") as dev, open(eval_xml, "r") as eval:
+    with open(training_xml, "r") as training:
         get_docsetID_docID_match(training, docID_docsetID_pairs)
-        get_docsetID_docID_match(dev, docID_docsetID_pairs)
-        get_docsetID_docID_match(eval, docID_docsetID_pairs)
         
     process(input_directory, output_directory, docID_docsetID_pairs)
     
