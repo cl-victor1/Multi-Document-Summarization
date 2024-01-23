@@ -46,7 +46,7 @@ Location of all source code
 ### Other Materials for D2
 - [Notebook Demo](https://colab.research.google.com/drive/12O_-mGa7kY9bDnpg7UTk68-pzOXtouhh?usp=sharing)
 - [Slides](https://docs.google.com/presentation/d/1SA4BHlqPNocj633CXlnUCiJl5jbSAbeq9EIMPmwoDfY/edit?usp=sharing)
-- [Report]
+- [Report](https://www.overleaf.com/project/65ab55ba7354b900096adf76/invite/token/2e834443383d082f2e53afb1796c7265e497eaacb6debd63?project_name=575%20Report&user_first_name=Qingyun)
 
 ### Misc
 - Use `XML.etree.ElementTree library` to parse XML in `extract.py` and `{training|dev|eval}_process.py`
