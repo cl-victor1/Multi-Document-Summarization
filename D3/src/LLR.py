@@ -4,6 +4,7 @@ from collections import defaultdict
 import os
 from decimal import Decimal
 from nltk.corpus import stopwords
+import string
 
 def combinations(n, k):
     # Calculate n! / (k! * (n - k)!)
@@ -13,18 +14,24 @@ def combinations(n, k):
         result *= (n - i + 1) / i
     return result
 
-def background_count(back_corpus_file):
+def background_count(back_corpus_file, punctuation, stopwords):
     word_count = defaultdict(int)
     total_words = 0
     with open(back_corpus_file, 'r') as back:
         for line in back:
-            words = line.strip().split()
+            words = [word.lower() for word in line.strip().split()] # ignore the case
             for word in words:
-                total_words += 1
-                word_count[word.lower()] += 1 # ignore the case
+                if word not in punctuation: # exclude punctuations
+                    if stopwords:
+                        if word not in stopwords:
+                            total_words += 1
+                            word_count[word] += 1 
+                    else:
+                        total_words += 1
+                        word_count[word] += 1 
     return total_words, word_count
          
-def input_count(files_path, stopwords):         
+def input_count(files_path, punctuation, stopwords):         
     word_count = defaultdict(int)
     total_words = 0
     files = os.listdir(files_path)
@@ -38,16 +45,17 @@ def input_count(files_path, stopwords):
                 # exclude meta information
                 if not line.startswith("HEADLINE") and not line.startswith("DATE_TIME") \
                     and not line.startswith("DATETIME") and not line.startswith("DATELINE"):
-                    words = line.strip().split()
+                    words = [word.lower() for word in line.strip().split()] # ignore the case
                     for word in words:
-                        if stopwords:
-                            if word not in stopwords:
+                        if word not in punctuation:
+                            if stopwords:
+                                if word not in stopwords:
+                                    total_words += 1
+                                    word_count[word.lower()] += 1 # ignore the case
+                            else:
                                 total_words += 1
                                 word_count[word.lower()] += 1 # ignore the case
-                        else:
-                            total_words += 1
-                            word_count[word.lower()] += 1 # ignore the case
-                    if len(words) >= 5: # exclude sentences shorter than 5
+                    if len(words) > 5: # exclude sentences whose length is <= 5
                         all_sentences.append(words)                        
     return total_words, word_count, all_sentences      
             
@@ -86,13 +94,15 @@ if __name__ == "__main__":
     summary_length = int(sys.argv[5])
     if_stopwords = int(sys.argv[6]) # 0 means not using stopwords, 1 means using stopwords
     
-    back_total_words, back_word_count = background_count(back_corpus_file)
+    english_punctuation = set(string.punctuation)    
     english_stopwords = None
     if if_stopwords == 1:
         english_stopwords = set(stopwords.words('english'))
+        
+    back_total_words, back_word_count = background_count(back_corpus_file, english_punctuation, english_stopwords)        
     for subdir in os.listdir(input_directory):
         files_path = os.path.join(input_directory, subdir)
-        input_total_words, input_word_count, all_sentences = input_count(files_path, english_stopwords)
+        input_total_words, input_word_count, all_sentences = input_count(files_path, english_punctuation, english_stopwords)
         important_words = LLR(back_total_words, back_word_count, input_total_words, input_word_count, confidence_level)
         sentence_weights = {} # keep track of weight of all sentences
         for i in range(len(all_sentences)): 
@@ -104,9 +114,9 @@ if __name__ == "__main__":
         while True:
             if ordered_sentences == []:
                 break
-            chosen = ordered_sentences.pop()
+            chosen = ordered_sentences.pop() # chose the most weighted sentence
             if curr_length + chosen[1][0] <= summary_length:
-                selected_sentences_indices.append(chosen[0]) # index
+                selected_sentences_indices.append(chosen[0]) # append index
                 curr_length += chosen[1][0]   # length
             else:
                 break
