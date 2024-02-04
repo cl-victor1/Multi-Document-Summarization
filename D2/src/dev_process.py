@@ -13,15 +13,23 @@ def write_content(headline, dateline, docID, block, output_directory, docID_docs
         output.write(f"DATE_TIME: {dateline}\n")
         # write tokenized sentences in TEXT
         output.write("\n")
-
-        for paragraph in block.find('TEXT').findall('P'):
-            paragraph = paragraph.text.replace('\n', ' ')
+        
+        if block.find('TEXT').findall('P') != []:
+            for paragraph in block.find('TEXT').findall('P'):
+                paragraph = paragraph.text.replace('\n', ' ')
+                sentences = nltk.sent_tokenize(paragraph)
+                for sentence in sentences:
+                    # Tokenize the sentence into a list of words
+                    tokenized_words = " ".join(nltk.word_tokenize(sentence))
+                    output.write(tokenized_words + "\n")
+                output.write("\n")
+        else: # deal with APW files of year 1998
+            paragraph = block.find('TEXT').text.replace('\n', ' ')
             sentences = nltk.sent_tokenize(paragraph)
             for sentence in sentences:
                 # Tokenize the sentence into a list of words
                 tokenized_words = " ".join(nltk.word_tokenize(sentence))
                 output.write(tokenized_words + "\n")
-            output.write("\n")
         output.write("\n")
 
 def process(input_directory, output_directory, docID_docsetID_pairs):
@@ -67,6 +75,7 @@ def process(input_directory, output_directory, docID_docsetID_pairs):
                         headline = ""      
                                   
                     write_content(headline, dateline, docID, body_element, output_directory, docID_docsetID_pairs)
+            
                     
         # if the file is a standard XML file
         else:
