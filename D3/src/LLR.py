@@ -123,7 +123,8 @@ if __name__ == "__main__":
         
         # Create the output_directory if it doesn't exist
         os.makedirs(output_directory, exist_ok=True)
-        with open(os.path.join(output_directory, subdir), "w") as output:
+        filename = f"{subdir[:-3]}-A.M.100.{subdir[-3]}.1"
+        with open(os.path.join(output_directory, filename), "w") as output:
             for i in selected_sentences_indices:
                 output.write(" ".join(all_sentences[i]) + "\n")
         
