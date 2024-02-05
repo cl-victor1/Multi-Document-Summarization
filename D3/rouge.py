@@ -1,5 +1,5 @@
 """
-This is the sample code for implemeneting ROUGE using the ROUGE package.
+This is the sample code for implementing ROUGE using the package.
 """
 from rouge import Rouge
 
