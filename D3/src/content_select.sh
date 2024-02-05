@@ -8,7 +8,8 @@ pip install rouge-score
 
 /nopt/dropbox/23-24/570/envs/570/bin/python ./src/sumBasic.py ??
 
-# /nopt/dropbox/23-24/570/envs/570/bin/python ./src/lexrank.py ??
+#/nopt/dropbox/23-24/570/envs/570/bin/python ./src/lexrank.py $input $output $summary_length
+
 #/dropbox/18-19/573/Data/models/devtest/
 /nopt/dropbox/23-24/570/envs/570/bin/python ./src/evaluate.py $15 $16
 /nopt/dropbox/23-24/570/envs/570/bin/python ./src/evaluate.py $15 $16
