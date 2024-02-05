@@ -36,7 +36,7 @@ def process(input_directory, output_file):
                 
 if __name__ == "__main__":   
     output_file = sys.argv[1]
-    input_directory = Path('./cna_eng')        
+    input_directory = sys.argv[2]      
     process(input_directory, output_file)
     
     
