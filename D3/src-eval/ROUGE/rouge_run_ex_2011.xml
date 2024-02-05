@@ -1,0 +1,838 @@
+<ROUGE_EVAL version="1.5.5">
+<EVAL ID="D1101-A.M.100.A">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1101-A.M.100.A.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1101-A.M.100.A.A</M>
+<M ID="B">D1101-A.M.100.A.B</M>
+<M ID="C">D1101-A.M.100.A.C</M>
+<M ID="D">D1101-A.M.100.A.D</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1102-A.M.100.A">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1102-A.M.100.A.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1102-A.M.100.A.A</M>
+<M ID="E">D1102-A.M.100.A.E</M>
+<M ID="F">D1102-A.M.100.A.F</M>
+<M ID="G">D1102-A.M.100.A.G</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1103-A.M.100.A">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1103-A.M.100.A.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1103-A.M.100.A.A</M>
+<M ID="C">D1103-A.M.100.A.C</M>
+<M ID="E">D1103-A.M.100.A.E</M>
+<M ID="G">D1103-A.M.100.A.G</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1104-A.M.100.A">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1104-A.M.100.A.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1104-A.M.100.A.A</M>
+<M ID="B">D1104-A.M.100.A.B</M>
+<M ID="D">D1104-A.M.100.A.D</M>
+<M ID="H">D1104-A.M.100.A.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1105-A.M.100.A">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1105-A.M.100.A.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1105-A.M.100.A.A</M>
+<M ID="B">D1105-A.M.100.A.B</M>
+<M ID="D">D1105-A.M.100.A.D</M>
+<M ID="H">D1105-A.M.100.A.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1106-A.M.100.A">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1106-A.M.100.A.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1106-A.M.100.A.A</M>
+<M ID="C">D1106-A.M.100.A.C</M>
+<M ID="D">D1106-A.M.100.A.D</M>
+<M ID="G">D1106-A.M.100.A.G</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1107-A.M.100.B">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1107-A.M.100.B.1</P>
+</PEERS>
+<MODELS>
+<M ID="B">D1107-A.M.100.B.B</M>
+<M ID="C">D1107-A.M.100.B.C</M>
+<M ID="E">D1107-A.M.100.B.E</M>
+<M ID="F">D1107-A.M.100.B.F</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1108-A.M.100.B">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1108-A.M.100.B.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1108-A.M.100.B.A</M>
+<M ID="B">D1108-A.M.100.B.B</M>
+<M ID="C">D1108-A.M.100.B.C</M>
+<M ID="G">D1108-A.M.100.B.G</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1109-A.M.100.B">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1109-A.M.100.B.1</P>
+</PEERS>
+<MODELS>
+<M ID="B">D1109-A.M.100.B.B</M>
+<M ID="E">D1109-A.M.100.B.E</M>
+<M ID="F">D1109-A.M.100.B.F</M>
+<M ID="H">D1109-A.M.100.B.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1110-A.M.100.B">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1110-A.M.100.B.1</P>
+</PEERS>
+<MODELS>
+<M ID="B">D1110-A.M.100.B.B</M>
+<M ID="D">D1110-A.M.100.B.D</M>
+<M ID="E">D1110-A.M.100.B.E</M>
+<M ID="H">D1110-A.M.100.B.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1111-A.M.100.B">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1111-A.M.100.B.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1111-A.M.100.B.A</M>
+<M ID="B">D1111-A.M.100.B.B</M>
+<M ID="C">D1111-A.M.100.B.C</M>
+<M ID="E">D1111-A.M.100.B.E</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1112-A.M.100.C">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1112-A.M.100.C.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1112-A.M.100.C.A</M>
+<M ID="C">D1112-A.M.100.C.C</M>
+<M ID="G">D1112-A.M.100.C.G</M>
+<M ID="H">D1112-A.M.100.C.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1113-A.M.100.C">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1113-A.M.100.C.1</P>
+</PEERS>
+<MODELS>
+<M ID="B">D1113-A.M.100.C.B</M>
+<M ID="C">D1113-A.M.100.C.C</M>
+<M ID="E">D1113-A.M.100.C.E</M>
+<M ID="F">D1113-A.M.100.C.F</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1114-A.M.100.C">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1114-A.M.100.C.1</P>
+</PEERS>
+<MODELS>
+<M ID="C">D1114-A.M.100.C.C</M>
+<M ID="E">D1114-A.M.100.C.E</M>
+<M ID="F">D1114-A.M.100.C.F</M>
+<M ID="G">D1114-A.M.100.C.G</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1115-A.M.100.C">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1115-A.M.100.C.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1115-A.M.100.C.A</M>
+<M ID="C">D1115-A.M.100.C.C</M>
+<M ID="D">D1115-A.M.100.C.D</M>
+<M ID="H">D1115-A.M.100.C.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1116-A.M.100.C">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1116-A.M.100.C.1</P>
+</PEERS>
+<MODELS>
+<M ID="C">D1116-A.M.100.C.C</M>
+<M ID="E">D1116-A.M.100.C.E</M>
+<M ID="F">D1116-A.M.100.C.F</M>
+<M ID="G">D1116-A.M.100.C.G</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1117-A.M.100.C">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1117-A.M.100.C.1</P>
+</PEERS>
+<MODELS>
+<M ID="B">D1117-A.M.100.C.B</M>
+<M ID="C">D1117-A.M.100.C.C</M>
+<M ID="F">D1117-A.M.100.C.F</M>
+<M ID="H">D1117-A.M.100.C.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1118-A.M.100.D">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1118-A.M.100.D.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1118-A.M.100.D.A</M>
+<M ID="D">D1118-A.M.100.D.D</M>
+<M ID="E">D1118-A.M.100.D.E</M>
+<M ID="F">D1118-A.M.100.D.F</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1119-A.M.100.D">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1119-A.M.100.D.1</P>
+</PEERS>
+<MODELS>
+<M ID="B">D1119-A.M.100.D.B</M>
+<M ID="C">D1119-A.M.100.D.C</M>
+<M ID="D">D1119-A.M.100.D.D</M>
+<M ID="G">D1119-A.M.100.D.G</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1120-A.M.100.D">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1120-A.M.100.D.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1120-A.M.100.D.A</M>
+<M ID="B">D1120-A.M.100.D.B</M>
+<M ID="D">D1120-A.M.100.D.D</M>
+<M ID="H">D1120-A.M.100.D.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1121-A.M.100.D">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1121-A.M.100.D.1</P>
+</PEERS>
+<MODELS>
+<M ID="B">D1121-A.M.100.D.B</M>
+<M ID="C">D1121-A.M.100.D.C</M>
+<M ID="D">D1121-A.M.100.D.D</M>
+<M ID="G">D1121-A.M.100.D.G</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1122-A.M.100.D">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1122-A.M.100.D.1</P>
+</PEERS>
+<MODELS>
+<M ID="C">D1122-A.M.100.D.C</M>
+<M ID="D">D1122-A.M.100.D.D</M>
+<M ID="E">D1122-A.M.100.D.E</M>
+<M ID="F">D1122-A.M.100.D.F</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1123-A.M.100.D">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1123-A.M.100.D.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1123-A.M.100.D.A</M>
+<M ID="D">D1123-A.M.100.D.D</M>
+<M ID="G">D1123-A.M.100.D.G</M>
+<M ID="H">D1123-A.M.100.D.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1124-A.M.100.E">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1124-A.M.100.E.1</P>
+</PEERS>
+<MODELS>
+<M ID="C">D1124-A.M.100.E.C</M>
+<M ID="E">D1124-A.M.100.E.E</M>
+<M ID="F">D1124-A.M.100.E.F</M>
+<M ID="G">D1124-A.M.100.E.G</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1125-A.M.100.E">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1125-A.M.100.E.1</P>
+</PEERS>
+<MODELS>
+<M ID="B">D1125-A.M.100.E.B</M>
+<M ID="C">D1125-A.M.100.E.C</M>
+<M ID="E">D1125-A.M.100.E.E</M>
+<M ID="G">D1125-A.M.100.E.G</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1126-A.M.100.E">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1126-A.M.100.E.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1126-A.M.100.E.A</M>
+<M ID="E">D1126-A.M.100.E.E</M>
+<M ID="F">D1126-A.M.100.E.F</M>
+<M ID="H">D1126-A.M.100.E.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1127-A.M.100.E">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1127-A.M.100.E.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1127-A.M.100.E.A</M>
+<M ID="D">D1127-A.M.100.E.D</M>
+<M ID="E">D1127-A.M.100.E.E</M>
+<M ID="H">D1127-A.M.100.E.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1128-A.M.100.E">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1128-A.M.100.E.1</P>
+</PEERS>
+<MODELS>
+<M ID="B">D1128-A.M.100.E.B</M>
+<M ID="D">D1128-A.M.100.E.D</M>
+<M ID="E">D1128-A.M.100.E.E</M>
+<M ID="F">D1128-A.M.100.E.F</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1129-A.M.100.E">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1129-A.M.100.E.1</P>
+</PEERS>
+<MODELS>
+<M ID="B">D1129-A.M.100.E.B</M>
+<M ID="C">D1129-A.M.100.E.C</M>
+<M ID="E">D1129-A.M.100.E.E</M>
+<M ID="F">D1129-A.M.100.E.F</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1130-A.M.100.F">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1130-A.M.100.F.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1130-A.M.100.F.A</M>
+<M ID="F">D1130-A.M.100.F.F</M>
+<M ID="G">D1130-A.M.100.F.G</M>
+<M ID="H">D1130-A.M.100.F.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1131-A.M.100.F">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1131-A.M.100.F.1</P>
+</PEERS>
+<MODELS>
+<M ID="D">D1131-A.M.100.F.D</M>
+<M ID="E">D1131-A.M.100.F.E</M>
+<M ID="F">D1131-A.M.100.F.F</M>
+<M ID="H">D1131-A.M.100.F.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1132-A.M.100.F">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1132-A.M.100.F.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1132-A.M.100.F.A</M>
+<M ID="C">D1132-A.M.100.F.C</M>
+<M ID="F">D1132-A.M.100.F.F</M>
+<M ID="H">D1132-A.M.100.F.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1133-A.M.100.F">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1133-A.M.100.F.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1133-A.M.100.F.A</M>
+<M ID="B">D1133-A.M.100.F.B</M>
+<M ID="D">D1133-A.M.100.F.D</M>
+<M ID="F">D1133-A.M.100.F.F</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1134-A.M.100.F">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1134-A.M.100.F.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1134-A.M.100.F.A</M>
+<M ID="D">D1134-A.M.100.F.D</M>
+<M ID="F">D1134-A.M.100.F.F</M>
+<M ID="H">D1134-A.M.100.F.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1135-A.M.100.G">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1135-A.M.100.G.1</P>
+</PEERS>
+<MODELS>
+<M ID="E">D1135-A.M.100.G.E</M>
+<M ID="F">D1135-A.M.100.G.F</M>
+<M ID="G">D1135-A.M.100.G.G</M>
+<M ID="H">D1135-A.M.100.G.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1136-A.M.100.G">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1136-A.M.100.G.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1136-A.M.100.G.A</M>
+<M ID="B">D1136-A.M.100.G.B</M>
+<M ID="E">D1136-A.M.100.G.E</M>
+<M ID="G">D1136-A.M.100.G.G</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1137-A.M.100.G">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1137-A.M.100.G.1</P>
+</PEERS>
+<MODELS>
+<M ID="B">D1137-A.M.100.G.B</M>
+<M ID="E">D1137-A.M.100.G.E</M>
+<M ID="F">D1137-A.M.100.G.F</M>
+<M ID="G">D1137-A.M.100.G.G</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1138-A.M.100.G">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1138-A.M.100.G.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1138-A.M.100.G.A</M>
+<M ID="B">D1138-A.M.100.G.B</M>
+<M ID="G">D1138-A.M.100.G.G</M>
+<M ID="H">D1138-A.M.100.G.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1139-A.M.100.G">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1139-A.M.100.G.1</P>
+</PEERS>
+<MODELS>
+<M ID="C">D1139-A.M.100.G.C</M>
+<M ID="D">D1139-A.M.100.G.D</M>
+<M ID="F">D1139-A.M.100.G.F</M>
+<M ID="G">D1139-A.M.100.G.G</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1140-A.M.100.H">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1140-A.M.100.H.1</P>
+</PEERS>
+<MODELS>
+<M ID="B">D1140-A.M.100.H.B</M>
+<M ID="D">D1140-A.M.100.H.D</M>
+<M ID="G">D1140-A.M.100.H.G</M>
+<M ID="H">D1140-A.M.100.H.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1141-A.M.100.H">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1141-A.M.100.H.1</P>
+</PEERS>
+<MODELS>
+<M ID="D">D1141-A.M.100.H.D</M>
+<M ID="F">D1141-A.M.100.H.F</M>
+<M ID="G">D1141-A.M.100.H.G</M>
+<M ID="H">D1141-A.M.100.H.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1142-A.M.100.H">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1142-A.M.100.H.1</P>
+</PEERS>
+<MODELS>
+<M ID="C">D1142-A.M.100.H.C</M>
+<M ID="E">D1142-A.M.100.H.E</M>
+<M ID="G">D1142-A.M.100.H.G</M>
+<M ID="H">D1142-A.M.100.H.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1143-A.M.100.H">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1143-A.M.100.H.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1143-A.M.100.H.A</M>
+<M ID="B">D1143-A.M.100.H.B</M>
+<M ID="D">D1143-A.M.100.H.D</M>
+<M ID="H">D1143-A.M.100.H.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1144-A.M.100.H">
+<PEER-ROOT>
+/home/tac/tac2011/Summarization/eval/peers/peers_segmented/peers_A
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/14-15/573/Data/models/evaltest
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1144-A.M.100.H.1</P>
+</PEERS>
+<MODELS>
+<M ID="C">D1144-A.M.100.H.C</M>
+<M ID="D">D1144-A.M.100.H.D</M>
+<M ID="G">D1144-A.M.100.H.G</M>
+<M ID="H">D1144-A.M.100.H.H</M>
+</MODELS>
+</EVAL>
+</ROUGE_EVAL>

@@ -1,0 +1,876 @@
+<ROUGE_EVAL version="1.5.5">
+<EVAL ID="D1001-A.M.100.A">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1001-A.M.100.A.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1001-A.M.100.A.A</M>
+<M ID="B">D1001-A.M.100.A.B</M>
+<M ID="F">D1001-A.M.100.A.F</M>
+<M ID="H">D1001-A.M.100.A.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1002-A.M.100.A">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1002-A.M.100.A.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1002-A.M.100.A.A</M>
+<M ID="B">D1002-A.M.100.A.B</M>
+<M ID="C">D1002-A.M.100.A.C</M>
+<M ID="D">D1002-A.M.100.A.D</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1003-A.M.100.A">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1003-A.M.100.A.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1003-A.M.100.A.A</M>
+<M ID="C">D1003-A.M.100.A.C</M>
+<M ID="E">D1003-A.M.100.A.E</M>
+<M ID="G">D1003-A.M.100.A.G</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1004-A.M.100.A">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1004-A.M.100.A.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1004-A.M.100.A.A</M>
+<M ID="D">D1004-A.M.100.A.D</M>
+<M ID="F">D1004-A.M.100.A.F</M>
+<M ID="H">D1004-A.M.100.A.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1005-A.M.100.A">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1005-A.M.100.A.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1005-A.M.100.A.A</M>
+<M ID="E">D1005-A.M.100.A.E</M>
+<M ID="F">D1005-A.M.100.A.F</M>
+<M ID="G">D1005-A.M.100.A.G</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1006-A.M.100.A">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1006-A.M.100.A.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1006-A.M.100.A.A</M>
+<M ID="B">D1006-A.M.100.A.B</M>
+<M ID="D">D1006-A.M.100.A.D</M>
+<M ID="F">D1006-A.M.100.A.F</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1007-A.M.100.B">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1007-A.M.100.B.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1007-A.M.100.B.A</M>
+<M ID="B">D1007-A.M.100.B.B</M>
+<M ID="E">D1007-A.M.100.B.E</M>
+<M ID="H">D1007-A.M.100.B.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1008-A.M.100.B">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1008-A.M.100.B.1</P>
+</PEERS>
+<MODELS>
+<M ID="B">D1008-A.M.100.B.B</M>
+<M ID="D">D1008-A.M.100.B.D</M>
+<M ID="E">D1008-A.M.100.B.E</M>
+<M ID="H">D1008-A.M.100.B.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1009-A.M.100.B">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1009-A.M.100.B.1</P>
+</PEERS>
+<MODELS>
+<M ID="B">D1009-A.M.100.B.B</M>
+<M ID="C">D1009-A.M.100.B.C</M>
+<M ID="F">D1009-A.M.100.B.F</M>
+<M ID="G">D1009-A.M.100.B.G</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1010-A.M.100.B">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1010-A.M.100.B.1</P>
+</PEERS>
+<MODELS>
+<M ID="B">D1010-A.M.100.B.B</M>
+<M ID="C">D1010-A.M.100.B.C</M>
+<M ID="G">D1010-A.M.100.B.G</M>
+<M ID="H">D1010-A.M.100.B.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1011-A.M.100.C">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1011-A.M.100.C.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1011-A.M.100.C.A</M>
+<M ID="B">D1011-A.M.100.C.B</M>
+<M ID="C">D1011-A.M.100.C.C</M>
+<M ID="E">D1011-A.M.100.C.E</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1012-A.M.100.C">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1012-A.M.100.C.1</P>
+</PEERS>
+<MODELS>
+<M ID="C">D1012-A.M.100.C.C</M>
+<M ID="D">D1012-A.M.100.C.D</M>
+<M ID="E">D1012-A.M.100.C.E</M>
+<M ID="F">D1012-A.M.100.C.F</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1013-A.M.100.C">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1013-A.M.100.C.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1013-A.M.100.C.A</M>
+<M ID="B">D1013-A.M.100.C.B</M>
+<M ID="C">D1013-A.M.100.C.C</M>
+<M ID="D">D1013-A.M.100.C.D</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1014-A.M.100.C">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1014-A.M.100.C.1</P>
+</PEERS>
+<MODELS>
+<M ID="C">D1014-A.M.100.C.C</M>
+<M ID="E">D1014-A.M.100.C.E</M>
+<M ID="G">D1014-A.M.100.C.G</M>
+<M ID="H">D1014-A.M.100.C.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1015-A.M.100.C">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1015-A.M.100.C.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1015-A.M.100.C.A</M>
+<M ID="C">D1015-A.M.100.C.C</M>
+<M ID="E">D1015-A.M.100.C.E</M>
+<M ID="F">D1015-A.M.100.C.F</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1016-A.M.100.C">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1016-A.M.100.C.1</P>
+</PEERS>
+<MODELS>
+<M ID="B">D1016-A.M.100.C.B</M>
+<M ID="C">D1016-A.M.100.C.C</M>
+<M ID="E">D1016-A.M.100.C.E</M>
+<M ID="H">D1016-A.M.100.C.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1017-A.M.100.D">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1017-A.M.100.D.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1017-A.M.100.D.A</M>
+<M ID="B">D1017-A.M.100.D.B</M>
+<M ID="D">D1017-A.M.100.D.D</M>
+<M ID="G">D1017-A.M.100.D.G</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1018-A.M.100.D">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1018-A.M.100.D.1</P>
+</PEERS>
+<MODELS>
+<M ID="B">D1018-A.M.100.D.B</M>
+<M ID="C">D1018-A.M.100.D.C</M>
+<M ID="D">D1018-A.M.100.D.D</M>
+<M ID="G">D1018-A.M.100.D.G</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1019-A.M.100.D">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1019-A.M.100.D.1</P>
+</PEERS>
+<MODELS>
+<M ID="C">D1019-A.M.100.D.C</M>
+<M ID="D">D1019-A.M.100.D.D</M>
+<M ID="F">D1019-A.M.100.D.F</M>
+<M ID="H">D1019-A.M.100.D.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1020-A.M.100.D">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1020-A.M.100.D.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1020-A.M.100.D.A</M>
+<M ID="D">D1020-A.M.100.D.D</M>
+<M ID="G">D1020-A.M.100.D.G</M>
+<M ID="H">D1020-A.M.100.D.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1021-A.M.100.D">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1021-A.M.100.D.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1021-A.M.100.D.A</M>
+<M ID="B">D1021-A.M.100.D.B</M>
+<M ID="D">D1021-A.M.100.D.D</M>
+<M ID="E">D1021-A.M.100.D.E</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1022-A.M.100.D">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1022-A.M.100.D.1</P>
+</PEERS>
+<MODELS>
+<M ID="C">D1022-A.M.100.D.C</M>
+<M ID="D">D1022-A.M.100.D.D</M>
+<M ID="F">D1022-A.M.100.D.F</M>
+<M ID="H">D1022-A.M.100.D.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1023-A.M.100.E">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1023-A.M.100.E.1</P>
+</PEERS>
+<MODELS>
+<M ID="B">D1023-A.M.100.E.B</M>
+<M ID="D">D1023-A.M.100.E.D</M>
+<M ID="E">D1023-A.M.100.E.E</M>
+<M ID="G">D1023-A.M.100.E.G</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1024-A.M.100.E">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1024-A.M.100.E.1</P>
+</PEERS>
+<MODELS>
+<M ID="C">D1024-A.M.100.E.C</M>
+<M ID="E">D1024-A.M.100.E.E</M>
+<M ID="F">D1024-A.M.100.E.F</M>
+<M ID="H">D1024-A.M.100.E.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1025-A.M.100.E">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1025-A.M.100.E.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1025-A.M.100.E.A</M>
+<M ID="D">D1025-A.M.100.E.D</M>
+<M ID="E">D1025-A.M.100.E.E</M>
+<M ID="H">D1025-A.M.100.E.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1026-A.M.100.E">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1026-A.M.100.E.1</P>
+</PEERS>
+<MODELS>
+<M ID="C">D1026-A.M.100.E.C</M>
+<M ID="E">D1026-A.M.100.E.E</M>
+<M ID="F">D1026-A.M.100.E.F</M>
+<M ID="G">D1026-A.M.100.E.G</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1027-A.M.100.E">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1027-A.M.100.E.1</P>
+</PEERS>
+<MODELS>
+<M ID="B">D1027-A.M.100.E.B</M>
+<M ID="D">D1027-A.M.100.E.D</M>
+<M ID="E">D1027-A.M.100.E.E</M>
+<M ID="G">D1027-A.M.100.E.G</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1028-A.M.100.E">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1028-A.M.100.E.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1028-A.M.100.E.A</M>
+<M ID="B">D1028-A.M.100.E.B</M>
+<M ID="D">D1028-A.M.100.E.D</M>
+<M ID="E">D1028-A.M.100.E.E</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1029-A.M.100.F">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1029-A.M.100.F.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1029-A.M.100.F.A</M>
+<M ID="C">D1029-A.M.100.F.C</M>
+<M ID="F">D1029-A.M.100.F.F</M>
+<M ID="H">D1029-A.M.100.F.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1030-A.M.100.F">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1030-A.M.100.F.1</P>
+</PEERS>
+<MODELS>
+<M ID="D">D1030-A.M.100.F.D</M>
+<M ID="E">D1030-A.M.100.F.E</M>
+<M ID="F">D1030-A.M.100.F.F</M>
+<M ID="G">D1030-A.M.100.F.G</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1031-A.M.100.F">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1031-A.M.100.F.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1031-A.M.100.F.A</M>
+<M ID="C">D1031-A.M.100.F.C</M>
+<M ID="F">D1031-A.M.100.F.F</M>
+<M ID="H">D1031-A.M.100.F.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1032-A.M.100.F">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1032-A.M.100.F.1</P>
+</PEERS>
+<MODELS>
+<M ID="B">D1032-A.M.100.F.B</M>
+<M ID="D">D1032-A.M.100.F.D</M>
+<M ID="F">D1032-A.M.100.F.F</M>
+<M ID="G">D1032-A.M.100.F.G</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1033-A.M.100.F">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1033-A.M.100.F.1</P>
+</PEERS>
+<MODELS>
+<M ID="C">D1033-A.M.100.F.C</M>
+<M ID="E">D1033-A.M.100.F.E</M>
+<M ID="F">D1033-A.M.100.F.F</M>
+<M ID="H">D1033-A.M.100.F.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1034-A.M.100.F">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1034-A.M.100.F.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1034-A.M.100.F.A</M>
+<M ID="B">D1034-A.M.100.F.B</M>
+<M ID="F">D1034-A.M.100.F.F</M>
+<M ID="H">D1034-A.M.100.F.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1035-A.M.100.G">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1035-A.M.100.G.1</P>
+</PEERS>
+<MODELS>
+<M ID="D">D1035-A.M.100.G.D</M>
+<M ID="E">D1035-A.M.100.G.E</M>
+<M ID="F">D1035-A.M.100.G.F</M>
+<M ID="G">D1035-A.M.100.G.G</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1036-A.M.100.G">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1036-A.M.100.G.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1036-A.M.100.G.A</M>
+<M ID="B">D1036-A.M.100.G.B</M>
+<M ID="F">D1036-A.M.100.G.F</M>
+<M ID="G">D1036-A.M.100.G.G</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1037-A.M.100.G">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1037-A.M.100.G.1</P>
+</PEERS>
+<MODELS>
+<M ID="B">D1037-A.M.100.G.B</M>
+<M ID="C">D1037-A.M.100.G.C</M>
+<M ID="G">D1037-A.M.100.G.G</M>
+<M ID="H">D1037-A.M.100.G.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1038-A.M.100.G">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1038-A.M.100.G.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1038-A.M.100.G.A</M>
+<M ID="C">D1038-A.M.100.G.C</M>
+<M ID="F">D1038-A.M.100.G.F</M>
+<M ID="G">D1038-A.M.100.G.G</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1039-A.M.100.G">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1039-A.M.100.G.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1039-A.M.100.G.A</M>
+<M ID="D">D1039-A.M.100.G.D</M>
+<M ID="E">D1039-A.M.100.G.E</M>
+<M ID="G">D1039-A.M.100.G.G</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1040-A.M.100.G">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1040-A.M.100.G.1</P>
+</PEERS>
+<MODELS>
+<M ID="B">D1040-A.M.100.G.B</M>
+<M ID="C">D1040-A.M.100.G.C</M>
+<M ID="F">D1040-A.M.100.G.F</M>
+<M ID="G">D1040-A.M.100.G.G</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1041-A.M.100.H">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1041-A.M.100.H.1</P>
+</PEERS>
+<MODELS>
+<M ID="D">D1041-A.M.100.H.D</M>
+<M ID="E">D1041-A.M.100.H.E</M>
+<M ID="G">D1041-A.M.100.H.G</M>
+<M ID="H">D1041-A.M.100.H.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1042-A.M.100.H">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1042-A.M.100.H.1</P>
+</PEERS>
+<MODELS>
+<M ID="B">D1042-A.M.100.H.B</M>
+<M ID="C">D1042-A.M.100.H.C</M>
+<M ID="F">D1042-A.M.100.H.F</M>
+<M ID="H">D1042-A.M.100.H.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1043-A.M.100.H">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1043-A.M.100.H.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1043-A.M.100.H.A</M>
+<M ID="B">D1043-A.M.100.H.B</M>
+<M ID="G">D1043-A.M.100.H.G</M>
+<M ID="H">D1043-A.M.100.H.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1044-A.M.100.H">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1044-A.M.100.H.1</P>
+</PEERS>
+<MODELS>
+<M ID="A">D1044-A.M.100.H.A</M>
+<M ID="D">D1044-A.M.100.H.D</M>
+<M ID="G">D1044-A.M.100.H.G</M>
+<M ID="H">D1044-A.M.100.H.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1045-A.M.100.H">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1045-A.M.100.H.1</P>
+</PEERS>
+<MODELS>
+<M ID="C">D1045-A.M.100.H.C</M>
+<M ID="E">D1045-A.M.100.H.E</M>
+<M ID="F">D1045-A.M.100.H.F</M>
+<M ID="H">D1045-A.M.100.H.H</M>
+</MODELS>
+</EVAL>
+<EVAL ID="D1046-A.M.100.H">
+<PEER-ROOT>
+/dropbox/18-19/573/Data/mydata
+</PEER-ROOT>
+<MODEL-ROOT>
+/dropbox/18-19/573/Data/models/devtest/
+</MODEL-ROOT>
+<INPUT-FORMAT TYPE="SPL">
+</INPUT-FORMAT>
+<PEERS>
+<P ID="1">D1046-A.M.100.H.1</P>
+</PEERS>
+<MODELS>
+<M ID="D">D1046-A.M.100.H.D</M>
+<M ID="E">D1046-A.M.100.H.E</M>
+<M ID="G">D1046-A.M.100.H.G</M>
+<M ID="H">D1046-A.M.100.H.H</M>
+</MODELS>
+</EVAL>
+</ROUGE_EVAL>
