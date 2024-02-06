@@ -53,7 +53,6 @@ def main():
     fields = ['topicID', 'ROUGE-1-avgP', 'ROUGE-1-avgR', 'ROUGE-1-avgF', 'ROUGE-2-avgP', 'ROUGE-2-avgR', 'ROUGE-2-avgF', 'ROUGE-L-avgP', 'ROUGE-L-avgR', 'ROUGE-L-avgF']
 
     name = hypothesis_summary_dir.split("/")[-2]
-    print(name)
 
     outfile_name = f'rouge_output_{name}.csv'
 
@@ -71,6 +70,8 @@ def main():
             scoreD = get_rouge_score(model_summaries_D[i], hypothesis_summary_filenames[i])
 
             scores = [scoreA,scoreB,scoreC,scoreD]
+
+            print(f'ROUGE for {hypothesis_summary_filenames[i]} is:', scoreA)
 
             row['ROUGE-1-avgP'] = sum([score['rouge1'][0] for score in scores]) / 4 
             row['ROUGE-2-avgP'] = sum([score['rouge2'][0] for score in scores]) / 4 
