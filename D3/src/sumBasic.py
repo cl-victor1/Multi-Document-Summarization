@@ -517,4 +517,4 @@ def view_result():
             print(f"{i}: {s}")
         print();
 
-view_result()
+# view_result()
