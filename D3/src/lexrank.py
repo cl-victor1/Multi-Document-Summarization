@@ -1,12 +1,16 @@
 # Based of https://github.com/crabcamp/lexrank.git
 import math
 from collections import Counter, defaultdict
+import os
 import re
 import sys
+import traceback
 import numpy as np
 import nltk
 from nltk.corpus import stopwords
 from scipy.sparse.csgraph import connected_components
+
+nltk.download('stopwords')
 
 def clean(file_path, add_sentence_marker=False):
     """
@@ -37,12 +41,13 @@ def clean(file_path, add_sentence_marker=False):
         for line in file:
             # Remove any leading/trailing whitespace and \n's
             stripped_line = line.strip()
+            #import pdb; pdb.set_trace()
 
             # Identify the section based on flags and content
             if stripped_line.startswith('HEADLINE:'):
                 is_headline = True
                 cleaned_info["HEADLINE"] += stripped_line[len('HEADLINE:'):].strip() + " "
-            elif stripped_line.startswith('DATELINE:'):
+            elif stripped_line.startswith('DATELINE:') or stripped_line.startswith('DATE_TIME:'):
                 is_headline = False
                 is_dateline = True
                 cleaned_info["DATELINE"] += stripped_line[len('DATELINE:'):].strip() + " "
@@ -229,7 +234,7 @@ class LexRank:
         threshold=.03,
         fast_power_method=True,
     ):
-        import pdb; pdb.set_trace()
+        #import pdb; pdb.set_trace()
         tf_scores = [
             Counter(self.tokenize_sentence(sentence)) for sentence in sentences
         ]
@@ -334,16 +339,32 @@ class LexRank:
 
         return similarity
 
-path_to_your_files = "/home2/jiayiy9/ling575/LING-575-project/D2/outputs"
-test_path = path_to_your_files + "/training_output/D0901A-A/AFP_ENG_20050119.0019"
+#path_to_your_files = "/home2/jiayiy9/ling575/LING-575-project/D2/outputs"
+#test_path = path_to_your_files + "/training_output/D0901A-A/AFP_ENG_20050119.0019"
 
 if __name__ == "__main__":
-    test_path = sys.argv[1]
-    cleaned_text_dict = clean(test_path)
-    sentences = cleaned_text_dict['TEXT']
-    
-    nltk.download('stopwords')
+    input_directory = sys.argv[1]
+    output_directory = sys.argv[2]
+    summary_length = int(sys.argv[3])
     en_stop_words = set(stopwords.words("english"))
-    lxr = LexRank(sentences, stopwords=en_stop_words)
-    summary = lxr.get_summary(sentences, summary_size=2, threshold=.1)
-    print(summary)
+    os.makedirs(output_directory, exist_ok=True)
+    
+    for subdir in os.listdir(input_directory):
+        files_path = os.path.join(input_directory, subdir)
+        sentences = []
+        for file_name in os.listdir(files_path):
+            file_path = os.path.join(files_path, file_name)
+            cleaned_text_dict = clean(file_path)
+            sentences.extend(cleaned_text_dict['TEXT'])
+            
+        try:
+            lxr = LexRank(sentences, stopwords=en_stop_words)
+            summary = lxr.get_summary(sentences, summary_size=summary_length, threshold=.1)
+            filename = f"{subdir[:-3]}-A.M.100.{subdir[-3]}.1"
+            with open(os.path.join(output_directory, filename), "w") as output:
+                output.write("\n".join(summary))
+                
+        except Exception:
+            print(traceback.format_exc())
+            print(cleaned_text_dict)
+            import pdb; pdb.set_trace()
