@@ -77,7 +77,7 @@ def LLR(n2, back_word_count, n1, input_word_count, confidence_level):
     return important_words
         
 def calculate_weight(sentence, important_words): # every sentence is a list of tokenized words
-    weight = 0
+    weight = 0 # weight is the number of important words that each sentence has
     sentence_length = 0
     for word in sentence:
         sentence_length += 1
