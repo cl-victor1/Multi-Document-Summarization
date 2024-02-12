@@ -39,9 +39,6 @@ def get_embedding(sentence): # get embedding of each sentence, sentence is a str
     # Perform pooling. In this case, max pooling.
     sentence_embeddings = mean_pooling(model_output, encoded_input['attention_mask'])
     return sentence_embeddings[0]
-    # # The cosine distance function from scipy.spatial.distance returns the cosine distance, which is 1 minus the cosine similarity.
-    # similarity = 1 - cosine(sentence_embeddings[0], sentence_embeddings[1])
-    # return similarity
 
 def background_count(back_corpus_file, punctuation, stopwords): # get information from background corpus   
     word_count = defaultdict(int)
@@ -65,7 +62,6 @@ def input_count(files_path, punctuation, stopwords, threshold): # get informatio
     total_words = 0
     files = os.listdir(files_path)
     all_sentences = []
-    sentence_embeddings = []
     # Iterate through each file
     for file_name in files:
         # Create the full path to the file
@@ -86,9 +82,8 @@ def input_count(files_path, punctuation, stopwords, threshold): # get informatio
                                 total_words += 1
                                 word_count[word.lower()] += 1 # ignore the case
                     if len(words) > threshold and good_sentence(" ".join(words)): # only include sentences whose length is > threshold and are good sentences
-                        all_sentences.append(words) 
-                        sentence_embeddings.append(get_embedding(" ".join(words)))                       
-    return total_words, word_count, all_sentences, sentence_embeddings      
+                        all_sentences.append(words)                       
+    return total_words, word_count, all_sentences      
             
 def LLR(n2, back_word_count, n1, input_word_count, confidence_level):
     important_words = set()
@@ -134,7 +129,7 @@ def main():
     back_total_words, back_word_count = background_count(back_corpus_file, english_punctuation, english_stopwords)        
     for subdir in os.listdir(input_directory):
         files_path = os.path.join(input_directory, subdir)
-        input_total_words, input_word_count, all_sentences, sentence_embeddings = input_count(files_path, english_punctuation, english_stopwords, length_threshold)
+        input_total_words, input_word_count, all_sentences = input_count(files_path, english_punctuation, english_stopwords, length_threshold)
         important_words = LLR(back_total_words, back_word_count, input_total_words, input_word_count, confidence_level)
         sentence_weights = {} # keep track of weight of all sentences
         for i in range(len(all_sentences)): 
@@ -142,6 +137,7 @@ def main():
             sentence_weights[i] = (len(all_sentences[i]), calculate_weight(all_sentences[i], important_words))
         ordered_sentences = sorted(sentence_weights.items(), key=lambda x: x[1][1])
         selected_sentences_indices = []
+        sentence_embeddings = []
         curr_length = 0
         while True: # select sentences
             if ordered_sentences == []:
@@ -149,15 +145,15 @@ def main():
             chosen = ordered_sentences.pop() # chose the most weighted sentence
             if curr_length + chosen[1][0] <= summary_length:
                 include_sentence = True
+                chosen_embedding = get_embedding(" ".join(all_sentences[chosen[0]])) # embedding of the currently chosen sentence
                 # get the similarity between the chosen sentence and each of the selected sentences
-                for index in selected_sentences_indices:
-                    embedding1 = sentence_embeddings[index] # embedding of one selected sentence
-                    embedding2 = sentence_embeddings[chosen[0]] # embedding of the currently chosen sentence
-                    if 1 - cosine(embedding1, embedding2) >= similarity_threshold:
+                for embedding in sentence_embeddings:                    
+                    if 1 - cosine(embedding, chosen_embedding) >= similarity_threshold:
                         include_sentence = False
                         break
                 if include_sentence:
                     selected_sentences_indices.append(chosen[0]) # append index of the chosen sentence
+                    sentence_embeddings.append(chosen_embedding)
                     curr_length += chosen[1][0]   # length
             else:
                 break
