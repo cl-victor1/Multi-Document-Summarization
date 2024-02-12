@@ -2,11 +2,13 @@ import math
 import sys
 from collections import defaultdict
 import os
-from decimal import Decimal
 from nltk.corpus import stopwords
 import string
 import spacy
-from sentence_transformers import SentenceTransformer
+from transformers import AutoTokenizer, AutoModel
+import torch
+from scipy.spatial.distance import cosine
+import torch.nn.functional as F
 
 
 def good_sentence(sentence_as_string):   
@@ -15,19 +17,35 @@ def good_sentence(sentence_as_string):
     has_subject = any(token.dep_.endswith("subj") for token in doc)
     has_verb = any(token.pos_ == "VERB" for token in doc)
     contains_entity = len(doc.ents) > 0
-    return has_subject and has_verb and contains_entity
+    return has_subject and has_verb and contains_entity # A good sentence has to fulfill 3 conditions
 
-def cosine_similarity(sentence1, sentence2):
-    sentences = [sentence1, sentence2]
-    model = SentenceTransformer('sentence-transformers/bert-base-nli-mean-tokens')
-    embeddings = model.encode(sentences)
-    # Compute cosine similarity
-    similarity = 1 - cosine(embedding1, embedding2)
-    return similarity
+def get_embedding(sentence): # get embedding of each sentence, sentence is a string
+    #Mean Pooling - Take attention mask into account for correct averaging
+    def mean_pooling(model_output, attention_mask):
+        token_embeddings = model_output[0] #First element of model_output contains all token embeddings
+        input_mask_expanded = attention_mask.unsqueeze(-1).expand(token_embeddings.size()).float()
+        return torch.sum(token_embeddings * input_mask_expanded, 1) / torch.clamp(input_mask_expanded.sum(1), min=1e-9)
 
-def background_count(back_corpus_file, punctuation, stopwords):
+    # Sentences we want sentence embeddings for
+    sentences = [sentence]
+    # Load model 
+    tokenizer = AutoTokenizer.from_pretrained('../data/all-MiniLM-L6-v2')
+    model = AutoModel.from_pretrained('../data/all-MiniLM-L6-v2')
+    # Tokenize sentences
+    encoded_input = tokenizer(sentences, padding=True, truncation=True, return_tensors='pt')
+    # Compute token embeddings
+    with torch.no_grad():
+        model_output = model(**encoded_input)
+    # Perform pooling. In this case, max pooling.
+    sentence_embeddings = mean_pooling(model_output, encoded_input['attention_mask'])
+    return sentence_embeddings[0]
+    # # The cosine distance function from scipy.spatial.distance returns the cosine distance, which is 1 minus the cosine similarity.
+    # similarity = 1 - cosine(sentence_embeddings[0], sentence_embeddings[1])
+    # return similarity
+
+def background_count(back_corpus_file, punctuation, stopwords): # get information from background corpus   
     word_count = defaultdict(int)
-    total_words = 0
+    total_words = 0  
     with open(back_corpus_file, 'r') as back:
         for line in back:
             words = [word.lower() for word in line.strip().split()] # ignore the case
@@ -42,11 +60,12 @@ def background_count(back_corpus_file, punctuation, stopwords):
                         word_count[word] += 1 
     return total_words, word_count
          
-def input_count(files_path, punctuation, stopwords, threshold):         
+def input_count(files_path, punctuation, stopwords, threshold): # get information from the doc set (input)        
     word_count = defaultdict(int)
     total_words = 0
     files = os.listdir(files_path)
     all_sentences = []
+    sentence_embeddings = []
     # Iterate through each file
     for file_name in files:
         # Create the full path to the file
@@ -67,8 +86,9 @@ def input_count(files_path, punctuation, stopwords, threshold):
                                 total_words += 1
                                 word_count[word.lower()] += 1 # ignore the case
                     if len(words) > threshold and good_sentence(" ".join(words)): # only include sentences whose length is > threshold and are good sentences
-                        all_sentences.append(words)                        
-    return total_words, word_count, all_sentences      
+                        all_sentences.append(words) 
+                        sentence_embeddings.append(get_embedding(" ".join(words)))                       
+    return total_words, word_count, all_sentences, sentence_embeddings      
             
 def LLR(n2, back_word_count, n1, input_word_count, confidence_level):
     important_words = set()
@@ -78,7 +98,7 @@ def LLR(n2, back_word_count, n1, input_word_count, confidence_level):
         p1 = k1 / n1
         p2 = k2 / n2
         p = (k1 + k2) / (n1 + n2)
-        # change multiplications into additions of log
+        # combinations are canceled out
         ratio = 2 * (k1 * math.log(p1) + (n1 - k1) * math.log(1 - p1)\
             + k2 * math.log(p2) + (n2 - k2) * math.log(1 - p2)\
             -  k1 * math.log(p) - (n1 - k1) * math.log(1 - p)\
@@ -96,25 +116,25 @@ def calculate_weight(sentence, important_words): # every sentence is a list of t
             weight += 1
     return weight / sentence_length # weight of the sentence
     
-        
-if __name__ == "__main__":   
+def main():
     back_corpus_file = sys.argv[1]
     input_directory = sys.argv[2]
     output_directory = sys.argv[3]
     confidence_level = float(sys.argv[4])
     summary_length = int(sys.argv[5])
     if_stopwords = int(sys.argv[6]) # 0 means not using stopwords, 1 means using stopwords
-    threshold = int(sys.argv[7]) # least length of the potential sentences
+    length_threshold = int(sys.argv[7]) # least length of the potential sentences
+    similarity_threshold = float(sys.argv[8]) # Cosine similarity threshold
     
     english_punctuation = set(string.punctuation)    
     english_stopwords = None
-    if if_stopwords == 1:
+    if if_stopwords == 1: # 1 means using stopwords
         english_stopwords = set(stopwords.words('english'))
         
     back_total_words, back_word_count = background_count(back_corpus_file, english_punctuation, english_stopwords)        
     for subdir in os.listdir(input_directory):
         files_path = os.path.join(input_directory, subdir)
-        input_total_words, input_word_count, all_sentences = input_count(files_path, english_punctuation, english_stopwords, threshold)
+        input_total_words, input_word_count, all_sentences, sentence_embeddings = input_count(files_path, english_punctuation, english_stopwords, length_threshold)
         important_words = LLR(back_total_words, back_word_count, input_total_words, input_word_count, confidence_level)
         sentence_weights = {} # keep track of weight of all sentences
         for i in range(len(all_sentences)): 
@@ -128,8 +148,17 @@ if __name__ == "__main__":
                 break
             chosen = ordered_sentences.pop() # chose the most weighted sentence
             if curr_length + chosen[1][0] <= summary_length:
-                selected_sentences_indices.append(chosen[0]) # append index
-                curr_length += chosen[1][0]   # length
+                include_sentence = True
+                # get the similarity between the chosen sentence and each of the selected sentences
+                for index in selected_sentences_indices:
+                    embedding1 = sentence_embeddings[index] # embedding of one selected sentence
+                    embedding2 = sentence_embeddings[chosen[0]] # embedding of the currently chosen sentence
+                    if 1 - cosine(embedding1, embedding2) >= similarity_threshold:
+                        include_sentence = False
+                        break
+                if include_sentence:
+                    selected_sentences_indices.append(chosen[0]) # append index of the chosen sentence
+                    curr_length += chosen[1][0]   # length
             else:
                 break
         
@@ -139,4 +168,7 @@ if __name__ == "__main__":
         with open(os.path.join(output_directory, filename), "w") as output:
             for i in selected_sentences_indices:
                 output.write(" ".join(all_sentences[i]) + "\n")
+
+if __name__ == "__main__":   
+    main()
         
