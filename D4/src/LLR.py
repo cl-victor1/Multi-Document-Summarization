@@ -5,14 +5,25 @@ import os
 from decimal import Decimal
 from nltk.corpus import stopwords
 import string
+import spacy
+from sentence_transformers import SentenceTransformer
 
-def combinations(n, k):
-    # Calculate n! / (k! * (n - k)!)
-    # This approach avoids computing large factorials and mitigates the risk of overflow errors.
-    result = 1
-    for i in range(1, k + 1):
-        result *= (n - i + 1) / i
-    return result
+
+def good_sentence(sentence_as_string):   
+    nlp = spacy.load("en_core_web_sm")  # Load the English language model
+    doc = nlp(sentence_as_string)
+    has_subject = any(token.dep_.endswith("subj") for token in doc)
+    has_verb = any(token.pos_ == "VERB" for token in doc)
+    contains_entity = len(doc.ents) > 0
+    return has_subject and has_verb and contains_entity
+
+def cosine_similarity(sentence1, sentence2):
+    sentences = [sentence1, sentence2]
+    model = SentenceTransformer('sentence-transformers/bert-base-nli-mean-tokens')
+    embeddings = model.encode(sentences)
+    # Compute cosine similarity
+    similarity = 1 - cosine(embedding1, embedding2)
+    return similarity
 
 def background_count(back_corpus_file, punctuation, stopwords):
     word_count = defaultdict(int)
@@ -55,7 +66,7 @@ def input_count(files_path, punctuation, stopwords, threshold):
                             else:
                                 total_words += 1
                                 word_count[word.lower()] += 1 # ignore the case
-                    if len(words) > threshold: # exclude sentences whose length is <= 5
+                    if len(words) > threshold and good_sentence(" ".join(words)): # only include sentences whose length is > threshold and are good sentences
                         all_sentences.append(words)                        
     return total_words, word_count, all_sentences      
             
@@ -68,10 +79,10 @@ def LLR(n2, back_word_count, n1, input_word_count, confidence_level):
         p2 = k2 / n2
         p = (k1 + k2) / (n1 + n2)
         # change multiplications into additions of log
-        ratio = 2 * (math.log(Decimal(combinations(n1, k1))) + k1 * math.log(p1) + (n1 - k1) * math.log(1 - p1)\
-            + math.log(Decimal(combinations(n2, k2))) + k2 * math.log(p2) + (n2 - k2) * math.log(1 - p2)\
-            - math.log(Decimal(combinations(n1, k1))) - k1 * math.log(p) - (n1 - k1) * math.log(1 - p)\
-                - math.log(Decimal(combinations(n2, k2))) - k2 * math.log(p) - (n2 - k2) * math.log(1 - p))
+        ratio = 2 * (k1 * math.log(p1) + (n1 - k1) * math.log(1 - p1)\
+            + k2 * math.log(p2) + (n2 - k2) * math.log(1 - p2)\
+            -  k1 * math.log(p) - (n1 - k1) * math.log(1 - p)\
+                 - k2 * math.log(p) - (n2 - k2) * math.log(1 - p))
         if float(ratio) > confidence_level:
             important_words.add(word)
     return important_words
@@ -112,7 +123,7 @@ if __name__ == "__main__":
         ordered_sentences = sorted(sentence_weights.items(), key=lambda x: x[1][1])
         selected_sentences_indices = []
         curr_length = 0
-        while True:
+        while True: # select sentences
             if ordered_sentences == []:
                 break
             chosen = ordered_sentences.pop() # chose the most weighted sentence
