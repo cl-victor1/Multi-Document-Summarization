@@ -1,4 +1,6 @@
 #!/bin/sh
 
-/nopt/dropbox/23-24/570/envs/570/bin/python ./make_LLR_background.py $1 $2
-/nopt/dropbox/23-24/570/envs/570/bin/python ./LLR.py $1 $3 $4 $5 $6 $7
+# LLR
+python ./make_LLR_background.py /D4/data/back_corpus_file /D4/data/back_corpus
+python ./LLR.py /D4/data/back_corpus_file /D2/outputs/devtest_output /D4/outputs/LLR_summaries_no_stopwords_0.05 0.05 100 0 5 0.8
+python ./LLR.py /D4/data/back_corpus_file /D2/outputs/devtest_output /D4/outputs/LLR_summaries_stopwords_0.05 0.05 100 1 5 0.8

@@ -1,6 +1,8 @@
-from sentence_transformers import SentenceTransformer
-sentences = ["This is an example sentence", "Each sentence is converted"]
-
-model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
-embeddings = model.encode(sentences)
-print(embeddings)
+from transformers import AutoTokenizer, AutoModel
+tokenizer = AutoTokenizer.from_pretrained("THUDM/chatglm2-6b", trust_remote_code=True)
+model = AutoModel.from_pretrained("THUDM/chatglm2-6b", trust_remote_code=True).half().cuda()
+model = model.eval()
+response, history = model.chat(tokenizer, "你好", history=[])
+print(response)
+response, history = model.chat(tokenizer, "晚上睡不着应该怎么办", history=history)
+print(response)

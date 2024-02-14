@@ -1,3 +1,8 @@
+"""
+Author: Long Cheng, Sheng Bi, sentence-transformers/all-MiniLM-L6-v2 team
+Organization: University of Washington, the Linguistics Department
+Last Update: Feb 14, 2024
+"""
 import math
 import sys
 from collections import defaultdict
@@ -61,7 +66,8 @@ def input_count(files_path, punctuation, stopwords, threshold): # get informatio
     word_count = defaultdict(int)
     total_words = 0
     files = os.listdir(files_path)
-    all_sentences = []
+    tokenized_sentences = []
+    original_sentences = []
     # Iterate through each file
     for file_name in files:
         # Create the full path to the file
@@ -71,7 +77,8 @@ def input_count(files_path, punctuation, stopwords, threshold): # get informatio
                 # exclude meta information
                 if not line.startswith("HEADLINE") and not line.startswith("DATE_TIME") \
                     and not line.startswith("DATETIME") and not line.startswith("DATELINE"):
-                    words = [word.lower() for word in line.strip().split()] # ignore the case
+                    sentence = line.strip()
+                    words = [word.lower() for word in sentence.split()] # ignore the case
                     for word in words:
                         if word not in punctuation:
                             if stopwords:
@@ -82,8 +89,9 @@ def input_count(files_path, punctuation, stopwords, threshold): # get informatio
                                 total_words += 1
                                 word_count[word.lower()] += 1 # ignore the case
                     if len(words) > threshold and good_sentence(" ".join(words)): # only include sentences whose length is > threshold and are good sentences
-                        all_sentences.append(words)                       
-    return total_words, word_count, all_sentences      
+                        tokenized_sentences.append(words) 
+                        original_sentences.append(sentence) # original sentences to print                     
+    return total_words, word_count, tokenized_sentences, original_sentences      
             
 def LLR(n2, back_word_count, n1, input_word_count, confidence_level):
     important_words = set()
@@ -111,6 +119,20 @@ def calculate_weight(sentence, important_words): # every sentence is a list of t
             weight += 1
     return weight / sentence_length # weight of the sentence
     
+# for information ordering, let senteces with the most overlap of entities be together
+def Jaccard(sentence1, sentence2): # as strings
+    # Load the English language model
+    nlp = spacy.load("en_core_web_sm")
+    # Process the sentences using spaCy
+    doc1 = nlp(sentence1)
+    doc2 = nlp(sentence2)
+    # Extract entities from the processed sentences
+    entities1 = set([(entity.text) for entity in doc1.ents])
+    entities2 = set([(entity.text) for entity in doc2.ents])
+
+    # Calculate the Jaccard similarity between the sets of entities
+    return len(entities1.intersection(entities2)) / len(entities1.union(entities2))
+
 def main():
     back_corpus_file = sys.argv[1]
     input_directory = sys.argv[2]
@@ -129,12 +151,12 @@ def main():
     back_total_words, back_word_count = background_count(back_corpus_file, english_punctuation, english_stopwords)        
     for subdir in os.listdir(input_directory):
         files_path = os.path.join(input_directory, subdir)
-        input_total_words, input_word_count, all_sentences = input_count(files_path, english_punctuation, english_stopwords, length_threshold)
+        input_total_words, input_word_count, tokenized_sentences, original_sentences = input_count(files_path, english_punctuation, english_stopwords, length_threshold)
         important_words = LLR(back_total_words, back_word_count, input_total_words, input_word_count, confidence_level)
         sentence_weights = {} # keep track of weight of all sentences
-        for i in range(len(all_sentences)): 
+        for i in range(len(tokenized_sentences)): 
             # keep track of length and weight of each sentence
-            sentence_weights[i] = (len(all_sentences[i]), calculate_weight(all_sentences[i], important_words))
+            sentence_weights[i] = (len(tokenized_sentences[i]), calculate_weight(tokenized_sentences[i], important_words))
         ordered_sentences = sorted(sentence_weights.items(), key=lambda x: x[1][1])
         selected_sentences_indices = []
         sentence_embeddings = []
@@ -145,7 +167,7 @@ def main():
             chosen = ordered_sentences.pop() # chose the most weighted sentence
             if curr_length + chosen[1][0] <= summary_length:
                 include_sentence = True
-                chosen_embedding = get_embedding(" ".join(all_sentences[chosen[0]])) # embedding of the currently chosen sentence
+                chosen_embedding = get_embedding(" ".join(tokenized_sentences[chosen[0]])) # embedding of the currently chosen sentence
                 # get the similarity between the chosen sentence and each of the selected sentences
                 for embedding in sentence_embeddings:                    
                     if 1 - cosine(embedding, chosen_embedding) >= similarity_threshold:
@@ -162,8 +184,20 @@ def main():
         os.makedirs(output_directory, exist_ok=True)
         filename = f"{subdir[:-3]}-A.M.100.{subdir[-3]}.1"
         with open(os.path.join(output_directory, filename), "w") as output:
-            for i in selected_sentences_indices:
-                output.write(" ".join(all_sentences[i]) + "\n")
+            stack = [] # keep track of the ordered sentences
+            output.write(original_sentences[selected_sentences_indices[0]] + "\n") # the first sentence is the most weighted one
+            stack.append(selected_sentences_indices.pop(0))
+            while selected_sentences_indices != []: # when there are still sentences left to be ordered 
+                biggest_Jaccard = float("-inf")
+                current_i = None # best candidate sentence
+                for i in selected_sentences_indices: # Calculate the Jaccard similarity between the last sentence in the order and each unordered sentence
+                    if Jaccard(original_sentences[i], original_sentences[stack[-1]]) > biggest_Jaccard:
+                        biggest_Jaccard = Jaccard(original_sentences[i], original_sentences[stack[-1]])
+                        current_i = i
+                output.write(original_sentences[current_i] + "\n")
+                # move the newly chosen sentence from selected_sentences_indices to stack
+                selected_sentences_indices.remove(current_i)
+                stack.append(current_i)
 
 if __name__ == "__main__":   
     main()
