@@ -11,14 +11,14 @@ def calc_avg_document_scores(target_file_dir, target_filename_unspecified, predi
     plm_path = "../data/bert_uncased_L-12_H-768_A-12" # path to the pretrained lang model
     target_file_vers = ["A", "B", "C", "D", "E", "F", "G", "H"]
 
-    kl_scores, l1_scores, l2_scores, l_inf_scores = [],[],[],[]
+    kl_scores, l1_scores, l2_scores, l_inf_scores = [], [], [], []
 
     for ver in target_file_vers:
         filename_check = str(target_filename_unspecified + ver)
         if filename_check in target_filenames:
             print("current target file found in target dir: " + filename_check)
-            target_file = open(target_file_dir + filename_check, "r")
-            target_sentences_list = target_file.readlines()
+            with open(target_file_dir + filename_check, encoding="ISO-8859-1") as t:
+                target_sentences_list = t.readlines()
             target_summary = "".join(target_sentences_list)
             prediction_sentences_list = prediction_file.readlines()
             prediction_summary = " ".join(prediction_sentences_list)
