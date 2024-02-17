@@ -379,7 +379,7 @@ if __name__ == "__main__":
         try:
             lxr = LexRank(sentences, stopwords=en_stop_words)
             summary = lxr.get_summary(sentences, summary_size=summary_length, threshold=similarity_threshold)
-            filename = f"{subdir[:-3]}-A.M.100.{subdir[-3]}.1"
+            filename = f"{subdir[:-3]}-A.M.100.{subdir[-3]}.3"
             with open(os.path.join(output_directory, filename), "w") as output:
                 output.write("\n".join(summary))
                 
