@@ -60,12 +60,16 @@ Location of all source code
 
 
 ## D3
-TBA
+### Initial model
 
 
 ## D4
-TBA
-
+### Improved Model
+- Clone the pretrained model (with git-lfs so make sure you have it installed `https://git-lfs.com`)
+```
+git lfs install
+git clone https://huggingface.co/google/bert_uncased_L-12_H-768_A-12
+```
 
 ## D5
 TBA
