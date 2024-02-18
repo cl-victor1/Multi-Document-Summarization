@@ -14,5 +14,6 @@ python ./LLR.py /D4/data/back_corpus_file /D2/outputs/devtest_output /D4/outputs
 python ./lexrank.py /D2/outputs/devtest_output /D4/outputs/LexRank_sentence_length_10_threshold_0.3_summary_length_5_chronological_ordering 10 0.3 5 chronological
 
 # evaluation
-python3 InfoLM.py $@
-python ./rouge_eval.py $1 $2 > $3
+python3 ./rouge_eval.py /D4/data/model_devtest /D4/outputs/LexRank_sentence_length_10_threshold_0.3_summary_length_5 > rouge_scores_LexRank.out
+python3 ./rouge_eval.py /D4/data/model_devtest /D4/outputs/sumbasic_summaries_final > rouge_scores_sumBasic.out
+python3 ./rouge_eval.py /D4/data/model_devtest /D4/outputs/LLR_summaries_no_stopwords_0.05 > rouge_scores_LLR.out
