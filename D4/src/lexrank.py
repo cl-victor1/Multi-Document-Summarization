@@ -11,9 +11,24 @@ import nltk
 from nltk.corpus import stopwords
 from scipy.spatial.distance import cosine
 from scipy.sparse.csgraph import connected_components
+from datetime_extractor import DateTimeExtractor
+from dateutil import parser
 from LLR import get_embedding, good_sentence
 
 nltk.download('stopwords')
+
+class Sentence:
+    def __init__(self, text, properties):
+        self.text = text
+        self.properties = properties
+        
+        
+    def get_text(self):
+        return self.text
+    
+    def get_timestamp(self):
+        return self.properties.get('timestamp', None)
+    
 
 def clean(file_path, add_sentence_marker=False):
     """
@@ -268,7 +283,7 @@ class LexRank:
         for doc in documents:
             doc_words = set()
 
-            for sentence in doc:
+            for sentence in doc.get_text():
                 words = self.tokenize_sentence(sentence)
                 doc_words.update(words)
 
@@ -295,7 +310,7 @@ class LexRank:
         return idf_score
 
     def _calculate_similarity_matrix(self, sentences):
-        embeddings = [get_embedding(sentence) for sentence in sentences]
+        embeddings = [get_embedding(sentence.get_text()) for sentence in sentences]
         length = len(sentences)
 
         similarity_matrix = np.zeros([length] * 2)
@@ -353,8 +368,49 @@ class LexRank:
 #test_path = path_to_your_files + "/training_output/D0901A-A/AFP_ENG_20050119.0019"
 
 def sentence_filter(sentence, sentence_length_threshold):
-    words = [word.lower() for word in sentence.split()]
+    words = [word.lower() for word in sentence.get_text().split()]
     return len(words) > sentence_length_threshold and good_sentence(" ".join(words))
+
+
+def lexrank_score_ordering(sentence_1, sentence_2, summary_sentences):
+    return int(summary_sentences.index(sentence_1) < summary_sentences.index(sentence_2))
+
+def chronological_ordering(sentence_1, sentence_2):
+    if sentence_1.get_timestamp() == sentence_2.get_timestamp():
+        return 0.5
+    else:
+        return (sentence_1.get_timestamp() < sentence_2.get_timestamp())
+
+def order_sentences(sentences, preference_func):
+    unordered = dict(enumerate(sentences))
+    ordered = []
+    sentence_score = [0 for i in range(len(sentences))]
+    
+    # rank the first time
+    for i, cur_sentence in unordered.items():
+        sentence_score[i] = sum(preference_func(cur_sentence, other_sentence) for other_sentence in unordered.values()) - sum(preference_func(other_sentence, cur_sentence) for other_sentence in unordered.values())
+        
+    while len(unordered):
+        cur_left = list(unordered.keys())
+        subset_list = [sentence_score[i] for i in cur_left]
+        max_index = subset_list.index(max(subset_list))
+        cur_max_index = cur_left[max_index]
+        unordered.pop(cur_max_index)
+        ordered.append(cur_max_index)
+        
+        for i, cur_sentence in unordered.items():
+            # rank again
+            sentence_score[i] = sum(preference_func(cur_sentence, other_sentence) for other_sentence in unordered.values()) - sum(preference_func(other_sentence, cur_sentence) for other_sentence in unordered.values())
+    
+    return [sentences[i] for i in ordered]
+
+
+def list_files(directory):
+    files = []
+    for root, _, filenames in os.walk(directory):
+        for filename in filenames:
+            files.append(os.path.join(root, filename))
+    return files
 
 if __name__ == "__main__":
     input_directory = sys.argv[1]
@@ -362,6 +418,7 @@ if __name__ == "__main__":
     sentence_length_threshold = int(sys.argv[3])
     similarity_threshold = float(sys.argv[4])
     summary_length = int(sys.argv[5])
+    sentence_ordering_method =  sys.argv[6]
     en_stop_words = set(stopwords.words("english"))
     
     os.makedirs(output_directory, exist_ok=True)
@@ -372,18 +429,51 @@ if __name__ == "__main__":
         for file_name in os.listdir(files_path):
             file_path = os.path.join(files_path, file_name)
             cleaned_text_dict = clean(file_path)
-            sentences.extend(cleaned_text_dict['TEXT'])
+            timestamp = None
+            try: 
+                timestamp = parser.parse(cleaned_text_dict['DATELINE'], fuzzy=True)
+                timestamp_from_title = parser.parse(file_path.split('/')[-1].split('.')[0], fuzzy=True)
+                if timestamp is None or timestamp_from_title < timestamp:
+                    timestamp = timestamp_from_title
+            except Exception:
+                pass 
+            
+            if timestamp is None:
+                timestamp = parser.parse(file_path.split('/')[-1].split('.')[0], fuzzy=True)
+                
+                
+            for sentence_text in cleaned_text_dict['TEXT']:
+                properties = dict()
+                if timestamp:
+                    properties['timestamp'] = timestamp
+                sentences.append(Sentence(text=sentence_text, properties=properties))
         
         sentences = list(filter(partial(sentence_filter, sentence_length_threshold=sentence_length_threshold), sentences))
             
         try:
             lxr = LexRank(sentences, stopwords=en_stop_words)
             summary = lxr.get_summary(sentences, summary_size=summary_length, threshold=similarity_threshold)
+            
+            ORDERING_METHOD = {
+                "lexrank": partial(lexrank_score_ordering, summary_sentences=summary),
+                "chronological": chronological_ordering
+            }
+            
+            order_method = ORDERING_METHOD.get(sentence_ordering_method, None)
+            
+            if order_method:
+                # summary is a list of Sentence object
+                ordered_summary = order_sentences(summary, order_method)
+            else:
+                ordered_summary = summary
+
             filename = f"{subdir[:-3]}-A.M.100.{subdir[-3]}.3"
             with open(os.path.join(output_directory, filename), "w") as output:
-                output.write("\n".join(summary))
+                for sentence in ordered_summary:
+                    output.write(sentence.get_text() + '\n')
                 
         except Exception:
             print(traceback.format_exc())
             print(cleaned_text_dict)
             import pdb; pdb.set_trace()
+        
