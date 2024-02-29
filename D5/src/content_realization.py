@@ -7,6 +7,7 @@ import re
 import string
 import sys
 import os
+import spacy
 
 def content_realization(text): # each text is only one sentence in this approach
     # Remove bylines and editorial content
@@ -56,6 +57,24 @@ def content_realization(text): # each text is only one sentence in this approach
 # cleaned_text = content_realization(text)
 # print(cleaned_text)
 
+def get_coref(summary):
+    nlp = spacy.load("en_core_web_sm")  # Load the English language model
+    coref_entities = set()
+    refined_summary = []
+    for line in summary.readlines():
+        sentence = line.strip()
+        nlp_sentence = nlp(sentence) # spacy object
+        for chunk in nlp_sentence.noun_chunks:
+            if chunk.root.pos_ == "PRON": # ignore pronouns
+                    continue
+            head = chunk.root.text # get the head of the NP
+            if head not in coref_entities: # this implies the first occurrence of the entity
+                coref_entities.add(head)
+            else: # replace the original NP by the head if this entity has appeared before
+                sentence = sentence.replace(chunk.text, head)
+        refined_summary.append(sentence)         
+    return refined_summary            
+            
 def main():
     input_directory = sys.argv[1]
     output_directory = sys.argv[2]
@@ -64,8 +83,9 @@ def main():
     for filename in os.listdir(input_directory):
         file_path = os.path.join(input_directory, filename)
         with open(file_path, 'r') as file, open(os.path.join(output_directory, filename), "w") as output:
-            for line in file.readlines():
-                cleaned_text = content_realization(line)
+            refined_summary = get_coref(file) # resolve coreference
+            for sentence in refined_summary:
+                cleaned_text = content_realization(sentence)
                 output.write(cleaned_text + "\n")
             
 if __name__ == "__main__":   
