@@ -8,6 +8,7 @@ import string
 import sys
 import os
 import spacy
+import nltk
 
 def content_realization(text): # each text is only one sentence in this approach
     # Remove bylines and editorial content
@@ -58,7 +59,7 @@ def content_realization(text): # each text is only one sentence in this approach
 # print(cleaned_text)
 
 def get_coref(summary):
-    nlp = spacy.load("en_core_web_sm")  # Load the English language model
+    nlp = spacy.load("en_core_web_md")  # Load the English language model
     coref_entities = set()
     refined_summary = []
     for line in summary.readlines():
@@ -68,10 +69,25 @@ def get_coref(summary):
             if chunk.root.pos_ == "PRON": # ignore pronouns
                     continue
             head = chunk.root.text # get the head of the NP
+            # Find all tokens attached to the noun chunk's root token
+            modifiers = []
+            for token in chunk.root.subtree:
+                # Check if the token is not the root token itself and is not the noun chunk's text
+                if token != chunk.root and token.text != chunk.text:
+                    modifiers.append(token.text)
             if head not in coref_entities: # this implies the first occurrence of the entity
                 coref_entities.add(head)
-            else: # replace the original NP by the head if this entity has appeared before
-                sentence = sentence.replace(chunk.text, head)
+            else: # if this entity has appeared before, replace the original NP by the head and remove the modifier
+                sentence = sentence.replace(chunk.text, head) 
+                words = nltk.word_tokenize(sentence)
+                head_index = words.index(head)
+                modifier = ""
+                for i in range(head_index + 1, len(words)):
+                    if words[i] in modifiers: # update the modifier sequence
+                        modifier += words[i]
+                    else: # remove the modifier
+                        sentence = sentence.replace(modifier, "")
+                        break                
         refined_summary.append(sentence)         
     return refined_summary            
             

@@ -1,21 +1,28 @@
 import spacy
 
-# Load SpaCy model with neuralcoref extension
+# Load SpaCy English model
 nlp = spacy.load("en_core_web_sm")
-neuralcoref = spacy.load('en_coref_sm')
-nlp.add_pipe(neuralcoref, name='neuralcoref')
 
-# Text to be analyzed
-text = """
-Barack Obama was born in Hawaii. He is the president of the United States.
-The capital of France is Paris. It is a beautiful city.
-"""
+# Sample sentence
+sentence = "The fox in the forest jumps over the lazy dog."
 
-# Process the text using SpaCy
-doc = nlp(text)
+# Process the sentence using SpaCy
+doc = nlp(sentence)
 
-# Iterate over each sentence and print the resolved coreferences
-for sentence in doc.sents:
-    print("Sentence:", sentence.text)
-    print("Resolved coreferences:", sentence._.coref_resolved)
-    print()
+# Iterate over noun chunks in the sentence
+for chunk in doc.noun_chunks:
+    print("Noun Chunk:", chunk.text)
+
+    # Find all tokens attached to the noun chunk's root token
+    modifiers = []
+    for token in chunk.root.subtree:
+        # Check if the token is not the root token itself and is not the noun chunk's text
+        if token != chunk.root and token.text != chunk.text:
+            modifiers.append(token.text)
+
+    # If there are any modifiers, print them
+    if modifiers:
+        print("Modifiers after noun chunk:", modifiers)
+    else:
+        print("No modifiers after noun chunk")
+
