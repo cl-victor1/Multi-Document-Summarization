@@ -1,7 +1,7 @@
 """
 Author: Long Cheng
 Organization: University of Washington, the Linguistics Department
-Last Update: Feb 27, 2024
+Last Update: 1 March, 2024
 """
 import re
 import string
@@ -10,7 +10,7 @@ import os
 import spacy
 import nltk
 
-def content_realization(text): # each text is only one sentence in this approach
+def content_enhance(text): # each text is only one sentence in this approach
     # Remove bylines and editorial content
     cleaned_text = re.sub(r'Byline:\s*[^.,]*\.|Editorial:\s*[^.,]*\.', '', text, flags=re.IGNORECASE)
 
@@ -58,7 +58,7 @@ def content_realization(text): # each text is only one sentence in this approach
 # cleaned_text = content_realization(text)
 # print(cleaned_text)
 
-def get_coref(summary):
+def resolve_coref(summary):
     nlp = spacy.load("en_core_web_md")  # Load the English language model
     coref_entities = set()
     refined_summary = []
@@ -99,9 +99,9 @@ def main():
     for filename in os.listdir(input_directory):
         file_path = os.path.join(input_directory, filename)
         with open(file_path, 'r') as file, open(os.path.join(output_directory, filename), "w") as output:
-            refined_summary = get_coref(file) # resolve coreference
+            refined_summary = resolve_coref(file) # resolve coreference
             for sentence in refined_summary:
-                cleaned_text = content_realization(sentence)
+                cleaned_text = content_enhance(sentence)
                 output.write(cleaned_text + "\n")
             
 if __name__ == "__main__":   
