@@ -178,7 +178,7 @@ def main():
                     sentence_embeddings.append(chosen_embedding)
                     curr_length += chosen[1][0]   # length
             else:
-                break
+                continue
         
         # Create the output_directory if it doesn't exist
         os.makedirs(output_directory, exist_ok=True)
