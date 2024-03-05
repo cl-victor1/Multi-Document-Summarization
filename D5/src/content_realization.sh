@@ -28,3 +28,6 @@ python3 ./rouge_eval.py /D5/data/model_devtest /D5/data/TAC_sharedtask_devset > 
 python3 ./rouge_eval.py /D5/data/model_evaltest /D5/outputs/D5_evaltest/LLR_evaltest > rouge_scores_LLR_evaltest.out
 python3 ./rouge_eval.py /D5/data/model_evaltest /D5/outputs/D5_evaltest/lexrank_compressed_evaltest > rouge_scores_lexrank_evaltest.out
 python3 ./rouge_eval.py /D5/data/model_evaltest /D5/outputs/D5_evaltest/sumbasic_evaltest > rouge_scores_sumbasic_evaltest.out
+
+python ./infolm_eval.py $@ # TODO Vicky Xiang
+python ./pearson.py $@ # TODO Vicky Xiang
