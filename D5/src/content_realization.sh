@@ -29,5 +29,9 @@ python3 ./rouge_eval.py /D5/data/model_evaltest /D5/outputs/D5_evaltest/LLR_eval
 python3 ./rouge_eval.py /D5/data/model_evaltest /D5/outputs/D5_evaltest/lexrank_compressed_evaltest > rouge_scores_lexrank_evaltest.out
 python3 ./rouge_eval.py /D5/data/model_evaltest /D5/outputs/D5_evaltest/sumbasic_evaltest > rouge_scores_sumbasic_evaltest.out
 
-python ./infolm_eval.py $@ # TODO Vicky Xiang
-python ./pearson.py $@ # TODO Vicky Xiang
+python ./infolm_eval.py ../data/model_devtest/ ../outputs/D5_devtest/LLR_devtest/ 1 infolm_output_LLR_devtest.csv
+python ./infolm_eval.py ../data/model_devtest/ ../outputs/D5_devtest/lexrank_compressed_devtest/ 2 infolm_output_sumbasic_devtest.csv
+python ./infolm_eval.py ../data/model_devtest/ ../outputs/D5_devtest/sumbasic_devtest/ 3 infolm_output_LexRank_devtest.csv
+python ./pearson.py ../data/model_devtest/ ../outputs/D5_devtest/LLR_devtest/ 1 pearson_output_LLR_devtest.csv
+python ./pearson.py ../data/model_devtest/ ../outputs/D5_devtest/sumbasic_devtest/ 2 pearson_output_sumbasic_devtest.csv
+python ./pearson.py ../data/model_devtest/ ../outputs/D5_devtest/lexrank_compressed_devtest/ 3 pearson_output_lexrank_devtest.csv

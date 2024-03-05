@@ -9,7 +9,8 @@ def calc_avg_document_scores(target_file_dir, target_filename_unspecified, predi
     target_filenames = os.listdir(target_file_dir)
     prediction_file = open(prediction_filename, "r")
 
-    plm_path = "/Users/vickyxiang/Documents/GitHub/LING-575-project/D5/data/uncased_L-12_H-768_A-12"  # path to the pretrained lang model
+    # change plm path to local path when not found
+    plm_path = "../D5/data/uncased_L-12_H-768_A-12"  # path to the pretrained lang model
     target_file_vers = ["A", "B", "C", "D", "E", "F", "G", "H"]
 
     kl_scores, l1_scores, l2_scores, l_inf_scores = [], [], [], []
