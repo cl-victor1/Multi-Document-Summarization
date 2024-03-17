@@ -1,4 +1,4 @@
-# UW LING-575-project
+# University of Washington LING575 Multi-Document Summarization Project
 
 ## D1
 Team Setup
