@@ -1,4 +1,4 @@
-# LING-575-project
+# University of Washington LING575 Multi-Document Summarization Project
 
 ## D1
 Team Setup
@@ -75,5 +75,5 @@ git clone https://huggingface.co/google/bert_uncased_L-12_H-768_A-12
 Final Summarization Systems
 
 ## D6
-TBA
+Final Report
 
