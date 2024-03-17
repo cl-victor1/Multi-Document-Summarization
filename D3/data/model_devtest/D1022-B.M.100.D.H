@@ -1,3 +1,0 @@
-At the IWC, Australia and New Zealand, backed by the U.S., Britain, and China, defeated Japanese proposals to end the ban on commercial whaling, to increase its own "scientific" whaling program, to extend this "research program" to include two endangered species, and to introduce secret balloting.
-Japan claims that it must kill whales to study them - but then sells the meat.
-Opponents say that there is no justification for lethally-based science and ask where are the scientific results from 18 years of Japanese "research." It is possible that Japan and other whaling nations might withdraw from the IWC.
